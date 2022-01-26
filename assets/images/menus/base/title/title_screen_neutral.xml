@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="title_screen_neutral.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="neutral pray0000" x="0" y="0" width="582" height="632" pivotX="334.85" pivotY="326" frameX="-34" frameY="-22" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0001" x="592" y="0" width="593" height="633" frameX="-29" frameY="-20" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0002" x="1195" y="0" width="604" height="636" frameX="-23" frameY="-17" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0003" x="1809" y="0" width="616" height="638" frameX="-17" frameY="-15" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0004" x="2435" y="0" width="627" height="640" frameX="-12" frameY="-13" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0005" x="3072" y="0" width="638" height="642" frameX="-6" frameY="-11" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0006" x="0" y="652" width="650" height="644" frameX="0" frameY="-9" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0007" x="660" y="652" width="638" height="646" frameX="-6" frameY="-7" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0008" x="1308" y="652" width="627" height="647" frameX="-12" frameY="-6" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0009" x="1945" y="652" width="616" height="648" frameX="-17" frameY="-5" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0010" x="2571" y="652" width="604" height="650" frameX="-23" frameY="-3" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0011" x="3185" y="652" width="593" height="650" frameX="-29" frameY="-3" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0012" x="0" y="1312" width="582" height="652" frameX="-34" frameY="-2" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0013" x="592" y="1312" width="582" height="653" frameX="-34" frameY="-1" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0014" x="1184" y="1312" width="593" height="652" frameX="-29" frameY="-1" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0015" x="1787" y="1312" width="604" height="652" frameX="-23" frameY="-1" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0016" x="2401" y="1312" width="616" height="653" frameX="-17" frameY="0" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0017" x="3027" y="1312" width="627" height="652" frameX="-12" frameY="-1" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0018" x="0" y="1975" width="638" height="651" frameX="-6" frameY="-2" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0019" x="648" y="1975" width="650" height="649" frameX="0" frameY="-4" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0020" x="1308" y="1975" width="638" height="646" frameX="-6" frameY="-7" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0021" x="1956" y="1975" width="627" height="643" frameX="-12" frameY="-10" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0022" x="2593" y="1975" width="616" height="639" frameX="-17" frameY="-14" frameWidth="650" frameHeight="654"/>
+	<SubTexture name="neutral pray0023" x="3219" y="1975" width="604" height="634" frameX="-23" frameY="-19" frameWidth="650" frameHeight="654"/>
+</TextureAtlas>

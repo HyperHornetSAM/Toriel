@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="slice.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="slice0000" x="0" y="0" width="39" height="49" pivotX="105.65" pivotY="258.75" frameX="-100" frameY="0" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0001" x="0" y="0" width="39" height="49" frameX="-100" frameY="0" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0002" x="49" y="0" width="59" height="141" frameX="-119" frameY="-20" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0003" x="49" y="0" width="59" height="141" frameX="-119" frameY="-20" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0004" x="118" y="0" width="71" height="343" frameX="-141" frameY="-67" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0005" x="118" y="0" width="71" height="343" frameX="-141" frameY="-67" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0006" x="199" y="0" width="115" height="175" frameX="-68" frameY="-315" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0007" x="199" y="0" width="115" height="175" frameX="-68" frameY="-315" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0008" x="324" y="0" width="123" height="100" frameX="-15" frameY="-415" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0009" x="324" y="0" width="123" height="100" frameX="-15" frameY="-415" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0010" x="0" y="353" width="69" height="27" frameX="0" frameY="-491" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0011" x="0" y="353" width="69" height="27" frameX="0" frameY="-491" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0012" x="79" y="353" width="1" height="1" frameX="-105" frameY="-258" frameWidth="212" frameHeight="518"/>
+	<SubTexture name="slice0013" x="79" y="353" width="1" height="1" frameX="-105" frameY="-258" frameWidth="212" frameHeight="518"/>
+</TextureAtlas>

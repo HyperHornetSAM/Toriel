@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="heart.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="heart0000" x="0" y="0" width="91" height="89" pivotX="50.75" pivotY="50.75" frameX="-5" frameY="-6" frameWidth="96" frameHeight="96"/>
+	<SubTexture name="heart0001" x="101" y="0" width="96" height="96"/>
+	<SubTexture name="heart0002" x="0" y="106" width="91" height="89" frameX="-3" frameY="-6" frameWidth="96" frameHeight="96"/>
+</TextureAtlas>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="heart_break.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="white heart death0000" x="0" y="0" width="40" height="36" pivotX="75.85" pivotY="46.5" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0001" x="50" y="0" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0002" x="101" y="0" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0003" x="152" y="0" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0004" x="203" y="0" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0005" x="253" y="0" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0006" x="304" y="0" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0007" x="355" y="0" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0008" x="406" y="0" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0009" x="456" y="0" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0010" x="507" y="0" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0011" x="558" y="0" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0012" x="609" y="0" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0013" x="659" y="0" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0014" x="710" y="0" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0015" x="761" y="0" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0016" x="812" y="0" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0017" x="862" y="0" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0018" x="913" y="0" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0019" x="964" y="0" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0020" x="0" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0021" x="50" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0022" x="101" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0023" x="152" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0024" x="203" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0025" x="253" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0026" x="304" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0027" x="355" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0028" x="406" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0029" x="456" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0030" x="507" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0031" x="558" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0032" x="609" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0033" x="456" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0034" x="507" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0035" x="558" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0036" x="609" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0037" x="456" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0038" x="507" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0039" x="558" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0040" x="609" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0041" x="456" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0042" x="507" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0043" x="558" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0044" x="609" y="46" width="40" height="36" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0045" x="456" y="46" width="41" height="36" frameX="-57" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0046" x="507" y="46" width="41" height="35" frameX="-55" frameY="-28" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0047" x="558" y="46" width="41" height="35" frameX="-56" frameY="-31" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0048" x="659" y="46" width="42" height="33" frameX="-55" frameY="-30" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0049" x="659" y="46" width="42" height="33" frameX="-55" frameY="-30" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0050" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0051" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0052" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0053" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0054" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0055" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0056" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0057" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0058" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0059" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0060" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0061" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0062" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0063" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0064" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0065" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0066" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0067" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0068" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0069" x="711" y="46" width="39" height="35" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0070" x="760" y="46" width="42" height="40" frameX="-56" frameY="-29" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0071" x="812" y="46" width="51" height="46" frameX="-50" frameY="-26" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0072" x="873" y="46" width="60" height="52" frameX="-45" frameY="-23" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0073" x="943" y="46" width="70" height="57" frameX="-40" frameY="-21" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0074" x="0" y="113" width="79" height="62" frameX="-35" frameY="-18" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0075" x="89" y="113" width="88" height="66" frameX="-30" frameY="-16" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0076" x="187" y="113" width="96" height="70" frameX="-26" frameY="-14" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0077" x="293" y="113" width="104" height="74" frameX="-22" frameY="-12" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0078" x="407" y="113" width="110" height="78" frameX="-19" frameY="-10" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0079" x="527" y="113" width="117" height="82" frameX="-15" frameY="-8" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0080" x="654" y="113" width="122" height="84" frameX="-12" frameY="-7" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0081" x="786" y="113" width="127" height="88" frameX="-10" frameY="-5" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0082" x="0" y="211" width="132" height="90" frameX="-7" frameY="-4" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0083" x="142" y="211" width="136" height="92" frameX="-5" frameY="-3" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0084" x="288" y="211" width="138" height="94" frameX="-4" frameY="-2" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0085" x="436" y="211" width="142" height="96" frameX="-2" frameY="-1" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0086" x="588" y="211" width="144" height="96" frameX="-1" frameY="-1" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0087" x="742" y="211" width="145" height="98" frameX="0" frameY="0" frameWidth="146" frameHeight="98"/>
+	<SubTexture name="white heart death0088" x="0" y="319" width="146" height="98"/>
+	<SubTexture name="white heart death0089" x="156" y="319" width="146" height="98"/>
+</TextureAtlas>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SAVE_symbol.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SAVE symbol0000" x="0" y="0" width="211" height="159" pivotX="131.55" pivotY="112.25" frameX="-1" frameY="-17" frameWidth="249" frameHeight="207"/>
+	<SubTexture name="SAVE symbol0001" x="0" y="0" width="211" height="159" frameX="-1" frameY="-17" frameWidth="249" frameHeight="207"/>
+	<SubTexture name="SAVE symbol0002" x="0" y="0" width="211" height="159" frameX="-1" frameY="-17" frameWidth="249" frameHeight="207"/>
+	<SubTexture name="SAVE symbol0003" x="0" y="0" width="211" height="159" frameX="-1" frameY="-17" frameWidth="249" frameHeight="207"/>
+	<SubTexture name="SAVE symbol0004" x="221" y="0" width="249" height="207"/>
+	<SubTexture name="SAVE symbol0005" x="221" y="0" width="249" height="207"/>
+	<SubTexture name="SAVE symbol0006" x="221" y="0" width="249" height="207"/>
+	<SubTexture name="SAVE symbol0007" x="221" y="0" width="249" height="207"/>
+</TextureAtlas>

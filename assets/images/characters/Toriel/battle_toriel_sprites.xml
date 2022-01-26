@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="battle toriel sprites.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Toriel Mad SING DOWN0000" x="0" y="0" width="336" height="780" pivotX="167.15" pivotY="787.85" frameX="0" frameY="-7" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0001" x="0" y="0" width="336" height="780" frameX="0" frameY="-7" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0002" x="346" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0003" x="346" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0004" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0005" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0006" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0007" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0008" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0009" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0010" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0011" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0012" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0013" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0014" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING DOWN0015" x="695" y="0" width="339" height="787" frameX="-3" frameY="0" frameWidth="342" frameHeight="787"/>
+	<SubTexture name="Toriel Mad SING LEFT0000" x="1044" y="0" width="353" height="799" pivotX="196.35" pivotY="802.5" frameX="-3" frameY="-2" frameWidth="356" frameHeight="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0001" x="1044" y="0" width="353" height="799" frameX="-3" frameY="-2" frameWidth="356" frameHeight="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0002" x="1407" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0003" x="1407" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0004" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0005" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0006" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0007" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0008" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0009" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0010" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0011" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0012" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0013" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0014" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING LEFT0015" x="1773" y="0" width="356" height="801"/>
+	<SubTexture name="Toriel Mad SING RIGHT0000" x="2139" y="0" width="356" height="804" pivotX="144.9" pivotY="805.2" frameX="-1" frameY="0" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0001" x="2139" y="0" width="356" height="804" frameX="-1" frameY="0" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0002" x="2505" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0003" x="2505" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0004" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0005" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0006" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0007" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0008" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0009" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0010" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0011" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0012" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0013" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0014" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING RIGHT0015" x="2863" y="0" width="348" height="802" frameX="0" frameY="-2" frameWidth="357" frameHeight="804"/>
+	<SubTexture name="Toriel Mad SING UP0000" x="3221" y="0" width="321" height="834" pivotX="154.85" pivotY="833.25" frameX="-4" frameY="0" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0001" x="3221" y="0" width="321" height="834" frameX="-4" frameY="0" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0002" x="3552" y="0" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0003" x="3552" y="0" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0004" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0005" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0006" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0007" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0008" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0009" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0010" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0011" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0012" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0013" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0014" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad SING UP0015" x="0" y="844" width="332" height="828" frameX="0" frameY="-6" frameWidth="332" frameHeight="834"/>
+	<SubTexture name="Toriel Mad idle dance0000" x="342" y="844" width="273" height="795" pivotX="158.25" pivotY="806.4" frameX="0" frameY="-11" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0001" x="342" y="844" width="273" height="795" frameX="0" frameY="-11" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0002" x="625" y="844" width="272" height="797" frameX="-1" frameY="-9" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0003" x="625" y="844" width="272" height="797" frameX="-1" frameY="-9" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0004" x="907" y="844" width="262" height="804" frameX="-5" frameY="-2" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0005" x="907" y="844" width="262" height="804" frameX="-5" frameY="-2" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0006" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0007" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0008" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0009" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0010" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0011" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0012" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel Mad idle dance0013" x="1179" y="844" width="262" height="806" frameX="-5" frameY="0" frameWidth="273" frameHeight="806"/>
+	<SubTexture name="Toriel SING DOWN MISS0000" x="1451" y="844" width="336" height="781" pivotX="167.55" pivotY="791.5" frameX="0" frameY="-10" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0001" x="1797" y="844" width="329" height="792" frameX="-5" frameY="0" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0002" x="1797" y="844" width="329" height="792" frameX="-5" frameY="0" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0003" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0004" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0005" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0006" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0007" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0008" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0009" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0010" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0011" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0012" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0013" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0014" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0015" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0016" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0017" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0018" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0019" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0020" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0021" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0022" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING DOWN MISS0023" x="2136" y="844" width="339" height="787" frameX="0" frameY="-4" frameWidth="339" frameHeight="792"/>
+	<SubTexture name="Toriel SING LEFT MISS0000" x="1044" y="0" width="353" height="799" pivotX="196.35" pivotY="802.5" frameX="-6" frameY="-1" frameWidth="356" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0001" x="2485" y="844" width="356" height="801" frameX="0" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0002" x="2485" y="844" width="356" height="801" frameX="0" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0003" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0004" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0005" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0006" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0007" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0008" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0009" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0010" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0011" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0012" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0013" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0014" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0015" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0016" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0017" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0018" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0019" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0020" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0021" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0022" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING LEFT MISS0023" x="2851" y="844" width="356" height="801" frameX="-1" frameY="0" frameWidth="359" frameHeight="801"/>
+	<SubTexture name="Toriel SING RIGHT MISS0000" x="3217" y="844" width="357" height="803" pivotX="145.3" pivotY="805.5" frameX="-1" frameY="0" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0001" x="3584" y="844" width="348" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0002" x="3584" y="844" width="348" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0003" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0004" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0005" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0006" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0007" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0008" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0009" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0010" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0011" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0012" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0013" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0014" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0015" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0016" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0017" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0018" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0019" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0020" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0021" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0022" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING RIGHT MISS0023" x="0" y="1682" width="349" height="802" frameX="0" frameY="-1" frameWidth="358" frameHeight="803"/>
+	<SubTexture name="Toriel SING UP MISS0000" x="359" y="1682" width="321" height="834" pivotX="159.35" pivotY="833.5" frameX="-9" frameY="0" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0001" x="690" y="1682" width="339" height="825" frameX="0" frameY="-8" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0002" x="690" y="1682" width="339" height="825" frameX="0" frameY="-8" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0003" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0004" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0005" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0006" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0007" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0008" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0009" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0010" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0011" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0012" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0013" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0014" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0015" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0016" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0017" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0018" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0019" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0020" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0021" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0022" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+	<SubTexture name="Toriel SING UP MISS0023" x="1039" y="1682" width="333" height="828" frameX="-3" frameY="-5" frameWidth="339" frameHeight="834"/>
+</TextureAtlas>

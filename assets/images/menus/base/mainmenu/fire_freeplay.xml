@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fire freeplay.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fireplace0000" x="0" y="0" width="2287" height="1136" pivotX="1107.15" pivotY="583.5"/>
+	<SubTexture name="fireplace0001" x="0" y="0" width="2287" height="1136"/>
+	<SubTexture name="fireplace0002" x="2297" y="0" width="2287" height="1136"/>
+	<SubTexture name="fireplace0003" x="2297" y="0" width="2287" height="1136"/>
+	<SubTexture name="fireplace0004" x="4594" y="0" width="2287" height="1136"/>
+	<SubTexture name="fireplace0005" x="4594" y="0" width="2287" height="1136"/>
+	<SubTexture name="fireplace0006" x="0" y="1146" width="2287" height="1136"/>
+	<SubTexture name="fireplace0007" x="0" y="1146" width="2287" height="1136"/>
+	<SubTexture name="fireplace0008" x="2297" y="1146" width="2287" height="1136"/>
+	<SubTexture name="fireplace0009" x="2297" y="1146" width="2287" height="1136"/>
+</TextureAtlas>

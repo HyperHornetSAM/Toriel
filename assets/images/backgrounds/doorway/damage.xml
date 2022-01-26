@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="damage.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="00000" x="0" y="0" width="49" height="49"/>
+	<SubTexture name="10000" x="49" y="0" width="28" height="49"/>
+	<SubTexture name="20000" x="77" y="0" width="49" height="49"/>
+	<SubTexture name="30000" x="126" y="0" width="49" height="49"/>
+	<SubTexture name="40000" x="175" y="0" width="49" height="49"/>
+	<SubTexture name="50000" x="0" y="49" width="49" height="49"/>
+	<SubTexture name="60000" x="49" y="49" width="49" height="49"/>
+	<SubTexture name="70000" x="98" y="49" width="49" height="49"/>
+	<SubTexture name="80000" x="147" y="49" width="49" height="49"/>
+	<SubTexture name="90000" x="196" y="49" width="49" height="49"/>
+</TextureAtlas>
