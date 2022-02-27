@@ -46,7 +46,7 @@ class Note extends FNFSprite
 
 	public static var swagWidth:Float = 160 * 0.7;
 
-	public function new(strumTime:Float, noteData:Int, noteAlt:Float, ?prevNote:Note, ?sustainNote:Bool = false)
+	public function new(strumTime:Float, noteData:Int, noteAlt:Float, ?prevNote:Note, ?sustainNote:Bool = false, ?noteType:Float = 0)
 	{
 		super(x, y);
 
@@ -62,6 +62,7 @@ class Note extends FNFSprite
 		this.strumTime = strumTime;
 		this.noteData = noteData;
 		this.noteAlt = noteAlt;
+		this.noteType = noteType;
 	}
 
 	override function update(elapsed:Float)
@@ -90,9 +91,10 @@ class Note extends FNFSprite
 
 		these are for all your custom note needs
 	**/
+	
 	public static function returnDefaultNote(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null):Note
 	{
-		var newNote:Note = new Note(strumTime, noteData, noteAlt, prevNote, isSustainNote);
+		var newNote:Note = new Note(strumTime, noteData, noteAlt, prevNote, isSustainNote, noteType);
 
 		// frames originally go here
 		switch (assetModifier)
@@ -128,21 +130,39 @@ class Note extends FNFSprite
 			default: // base game arrows for no reason whatsoever
 				newNote.frames = Paths.getSparrowAtlas(ForeverTools.returnSkinAsset('NOTE_assets', assetModifier, Init.trueSettings.get("Note Skin"),
 					'noteskins/notes'));
-				newNote.animation.addByPrefix('greenScroll', 'green0');
-				newNote.animation.addByPrefix('redScroll', 'red0');
-				newNote.animation.addByPrefix('blueScroll', 'blue0');
-				newNote.animation.addByPrefix('purpleScroll', 'purple0');
-				newNote.animation.addByPrefix('purpleholdend', 'pruple end hold');
-				newNote.animation.addByPrefix('greenholdend', 'green hold end');
-				newNote.animation.addByPrefix('redholdend', 'red hold end');
-				newNote.animation.addByPrefix('blueholdend', 'blue hold end');
-				newNote.animation.addByPrefix('purplehold', 'purple hold piece');
-				newNote.animation.addByPrefix('greenhold', 'green hold piece');
-				newNote.animation.addByPrefix('redhold', 'red hold piece');
-				newNote.animation.addByPrefix('bluehold', 'blue hold piece');
-				newNote.setGraphicSize(Std.int(newNote.width * 0.7));
-				newNote.updateHitbox();
-				newNote.antialiasing = true;
+				if(noteType == 3){
+					newNote.frames = Paths.getSparrowAtlas('customnotes/battle_sword_notes');
+						
+					newNote.animation.addByPrefix('greenScroll', 'battle sword up0');
+					newNote.animation.addByPrefix('redScroll', 'battle sword right0');
+					newNote.animation.addByPrefix('blueScroll', 'battle sword down0');
+					newNote.animation.addByPrefix('purpleScroll', 'battle sword left0');
+					newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+					newNote.updateHitbox();
+					newNote.antialiasing = true;
+					
+				}
+				else{
+					newNote.frames = Paths.getSparrowAtlas(ForeverTools.returnSkinAsset('NOTE_assets', assetModifier, Init.trueSettings.get("Note Skin"),
+					'noteskins/notes'));
+					
+					newNote.animation.addByPrefix('greenScroll', 'green0');
+					newNote.animation.addByPrefix('redScroll', 'red0');
+					newNote.animation.addByPrefix('blueScroll', 'blue0');
+					newNote.animation.addByPrefix('purpleScroll', 'purple0');
+					newNote.animation.addByPrefix('purpleholdend', 'pruple end hold');
+					newNote.animation.addByPrefix('greenholdend', 'green hold end');
+					newNote.animation.addByPrefix('redholdend', 'red hold end');
+					newNote.animation.addByPrefix('blueholdend', 'blue hold end');
+					newNote.animation.addByPrefix('purplehold', 'purple hold piece');
+					newNote.animation.addByPrefix('greenhold', 'green hold piece');
+					newNote.animation.addByPrefix('redhold', 'red hold piece');
+					newNote.animation.addByPrefix('bluehold', 'blue hold piece');
+					newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+					newNote.updateHitbox();
+					newNote.antialiasing = true;
+				}
+				
 		}
 		//
 		if (!isSustainNote)

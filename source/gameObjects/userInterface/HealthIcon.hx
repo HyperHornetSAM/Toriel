@@ -35,7 +35,20 @@ class HealthIcon extends FlxSprite
 		}
 
 		antialiasing = true;
-		var iconGraphic:FlxGraphic = FlxG.bitmap.add(Paths.image('icons/icon-' + iconPath));
+		var iconGraphic:FlxGraphic;
+		if(char == 'battle-toriel'){
+			iconGraphic = FlxG.bitmap.add(Paths.image('icons/icon-heartache-toriel'));
+		}
+		else if(char == 'bf-monochrome'){
+			iconGraphic = FlxG.bitmap.add(Paths.image('icons/icon-bf'));
+		}
+		else if(char == 'gf-monochrome'){
+			iconGraphic = FlxG.bitmap.add(Paths.image('icons/icon-gf'));
+		}
+		else
+		{
+			iconGraphic = FlxG.bitmap.add(Paths.image('icons/icon-' + iconPath));
+		}
 		loadGraphic(iconGraphic, true, Std.int(iconGraphic.width / 2), iconGraphic.height);
 
 		initialWidth = width;

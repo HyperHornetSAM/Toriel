@@ -470,8 +470,58 @@ class Character extends FNFSprite
 				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT', 24, false);
+				animation.addByPrefix('dusted', 'turn to dust', 24, false);
+				animation.addByPrefix('genuflect', 'genuflect', 24, false);
+				animation.addByPrefix('genocide', 'swordnoteGENOCIDE', 24, false);
+				animation.addByPrefix('insufficient', 'swordnoteINSUFFICIENT', 24, false);
+				animation.addByPrefix('neutral', 'swordnoteNEUTRAL', 24, false);
+				
 				
 				playAnim('idle');
+			case 'battle-toriel':
+				frames = Paths.getSparrowAtlas('characters/Toriel/battle_toriel_sprites');
+				animation.addByPrefix('idle', 'Toriel Mad idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Toriel Mad SING UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT', 24, false);
+				
+				playAnim('idle');
+			case 'bf-monochrome':
+				frames = Paths.getSparrowAtlas('characters/BF/bfBattle');
+
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				playAnim('idle');
+
+				flipX = true;
+				
+			case 'gf-monochrome':
+				tex = Paths.getSparrowAtlas('characters/GF/monochrome_gf');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				playAnim('danceRight');
 			default:
 				// set up animations if they aren't already
 

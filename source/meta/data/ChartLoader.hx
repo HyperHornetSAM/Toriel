@@ -41,6 +41,7 @@ class ChartLoader
 						var daNoteData:Int = Std.int(songNotes[1] % 4);
 						// define the note's animation (in accordance to the original game)!
 						var daNoteAlt:Float = 0;
+						var daNoteType:Int = songNotes[3];
 
 						// very stupid but I'm lazy
 						if (songNotes.length > 2)
@@ -68,7 +69,7 @@ class ChartLoader
 							oldNote = null;
 
 						// create the new note
-						var swagNote:Note = ForeverAssets.generateArrow(PlayState.assetModifier, daStrumTime, daNoteData, 0, daNoteAlt);
+						var swagNote:Note = ForeverAssets.generateArrow(PlayState.assetModifier, daStrumTime, daNoteData, daNoteType, daNoteAlt);
 						// set note speed
 						swagNote.noteSpeed = songData.speed;
 

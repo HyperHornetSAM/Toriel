@@ -1,5 +1,10 @@
 idle 0 0
-singUP 0 20
-singRIGHT -10 0
-singLEFT 25 5
+singUP 0 30
+singRIGHT -15 -3
+singLEFT 35 -7
 singDOWN 8 -18
+genuflect -10 0
+dusted -15 -165
+genocide 0 0
+neutral 0 0
+insufficient 0 0

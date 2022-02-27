@@ -59,6 +59,7 @@ class OriginalChartingState extends MusicBeatState
 	public static var lastSection:Int = 0;
 
 	var bpmTxt:FlxText;
+	var mechanicTxt:FlxText;
 
 	var strumLine:FlxSprite;
 	var curSong:String = 'Dadbattle';
@@ -155,6 +156,10 @@ class OriginalChartingState extends MusicBeatState
 		bpmTxt = new FlxText(1000, 50, 0, "", 16);
 		bpmTxt.scrollFactor.set();
 		add(bpmTxt);
+		
+		mechanicTxt = new FlxText(50, 50, 0, "", 16);
+		mechanicTxt.scrollFactor.set();
+		add(mechanicTxt);
 
 		strumLine = new FlxSprite(0, 50).makeGraphic(Std.int(FlxG.width / 2), 4);
 		add(strumLine);
@@ -699,6 +704,8 @@ class OriginalChartingState extends MusicBeatState
 			+ Std.string(FlxMath.roundDecimal(songMusic.length / 1000, 2))
 			+ "\nSection: "
 			+ curSection;
+		
+		mechanicTxt.text = "ALT + Click for Genocide Notes";
 		super.update(elapsed);
 	}
 
@@ -888,10 +895,11 @@ class OriginalChartingState extends MusicBeatState
 			var daNoteInfo = i[1];
 			var daStrumTime = i[0];
 			var daSus = i[2];
-			var daNoteType = 0;
-
+			/*var daNoteType = 0;
+			
 			if (i.length > 2)
-				daNoteType = i[3];
+				daNoteType = i[3];*/
+			var daNoteType = i[3];
 
 			var note:Note = ForeverAssets.generateArrow(PlayState.assetModifier, daStrumTime, daNoteInfo % 4, daNoteType, 0);
 			note.sustainLength = daSus;
@@ -982,7 +990,10 @@ class OriginalChartingState extends MusicBeatState
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
 		var noteType = curNoteType; // define notes as the current type
 		var noteSus = 0; // ninja you will NOT get away with this
-
+		
+		if (FlxG.keys.pressed.ALT)
+			noteType = 3;
+		
 		_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, noteType]);
 
 		curSelectedNote = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];

@@ -36,12 +36,35 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	public var limo:FNFSprite;
 
 	public var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
+	
+	public var swordDamageTotal:Int;
+	
+	public var swordDamageOnes:Int;
+	public var swordDamageTens:Int;
+	public var swordDamageHuns:Int;
+	
+	public var onesString:String;
+	public var tensString:String;
+	public var hunsString:String;
 
 	var fastCar:FNFSprite;
 
 	var upperBoppers:FNFSprite;
 	var bottomBoppers:FNFSprite;
 	var santa:FNFSprite;
+	
+	public static var doorway:FNFSprite;
+	var doorway_battle:FNFSprite;
+	var swordDamageOne:FNFSprite;
+	var swordDamageTen:FNFSprite;
+	var swordDamageHun:FNFSprite;
+	var bHeart:FNFSprite;
+	public static var tHeart:FNFSprite;
+	var gHeart:FNFSprite;
+	var sliceAnim:FNFSprite;
+	public static var heartHealth:FNFSprite;
+	var froggitJam:FNFSprite;
+	var saveSymbol:FNFSprite;
 
 	var bgGirls:BackgroundGirls;
 
@@ -135,14 +158,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				wall.active = false;
 				add(wall);
 
-				var froggitJam:FNFSprite = new FNFSprite(-325, 350);
+				froggitJam = new FNFSprite(-325, 350);
 				froggitJam.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/froggit_jam');
 				froggitJam.setGraphicSize(Std.int(froggitJam.width * 0.8));
 				froggitJam.animation.addByPrefix('jam', 'froggit vibe', 24, false);
 				froggitJam.antialiasing = true;
 				add(froggitJam);
 				
-				var saveSymbol:FNFSprite = new FNFSprite(1410, 800);
+				saveSymbol = new FNFSprite(1410, 800);
 				saveSymbol.setGraphicSize(Std.int(saveSymbol.width * 2));
 				saveSymbol.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/SAVE_symbol');
 				saveSymbol.animation.addByPrefix('save', 'SAVE symbol', 24, false);
@@ -151,8 +174,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 			case 'doorway':
 				curStage = 'doorway';
+				PlayState.defaultCamZoom = 0.8;
 				
-				var doorway:FNFSprite = new FNFSprite(-425, -500);
+				doorway = new FNFSprite(-425, -500);
 				doorway.loadGraphic(Paths.image('backgrounds/' + curStage + '/doorway'));
 				doorway.setGraphicSize(Std.int(doorway.width * 0.8));
 				doorway.updateHitbox();
@@ -160,6 +184,94 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				doorway.scrollFactor.set(0.95, 0.95);
 				doorway.active = false;
 				add(doorway);
+				
+				doorway_battle = new FNFSprite(-425, -400);
+				doorway_battle.loadGraphic(Paths.image('backgrounds/' + curStage + '/doorway_battle'));
+				doorway_battle.setGraphicSize(Std.int(doorway_battle.width * 0.8));
+				doorway_battle.updateHitbox();
+				doorway_battle.antialiasing = true;
+				doorway_battle.scrollFactor.set(0.95, 0.95);
+				doorway_battle.active = false;
+				doorway_battle.alpha = 0;
+				add(doorway_battle);
+				
+				swordDamageOne = new FNFSprite(315, 500);
+				swordDamageOne.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/damage');
+				swordDamageOne.animation.addByPrefix('0', '0', 24, false);
+				swordDamageOne.animation.addByPrefix('1', '1', 24, false);
+				swordDamageOne.animation.addByPrefix('2', '2', 24, false);
+				swordDamageOne.animation.addByPrefix('3', '3', 24, false);
+				swordDamageOne.animation.addByPrefix('4', '4', 24, false);
+				swordDamageOne.animation.addByPrefix('5', '5', 24, false);
+				swordDamageOne.animation.addByPrefix('6', '6', 24, false);
+				swordDamageOne.animation.addByPrefix('7', '7', 24, false);
+				swordDamageOne.animation.addByPrefix('8', '8', 24, false);
+				swordDamageOne.animation.addByPrefix('9', '9', 24, false);
+				swordDamageOne.setGraphicSize(Std.int(swordDamageOne.width * 2));
+				swordDamageOne.antialiasing = true;
+
+				swordDamageTen = new FNFSprite(200, 500);
+				swordDamageTen.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/damage');
+				swordDamageTen.animation.addByPrefix('0', '0', 24, false);
+				swordDamageTen.animation.addByPrefix('1', '1', 24, false);
+				swordDamageTen.animation.addByPrefix('2', '2', 24, false);
+				swordDamageTen.animation.addByPrefix('3', '3', 24, false);
+				swordDamageTen.animation.addByPrefix('4', '4', 24, false);
+				swordDamageTen.animation.addByPrefix('5', '5', 24, false);
+				swordDamageTen.animation.addByPrefix('6', '6', 24, false);
+				swordDamageTen.animation.addByPrefix('7', '7', 24, false);
+				swordDamageTen.animation.addByPrefix('8', '8', 24, false);
+				swordDamageTen.animation.addByPrefix('9', '9', 24, false);
+				swordDamageTen.setGraphicSize(Std.int(swordDamageTen.width * 2));
+				swordDamageTen.antialiasing = true;
+						
+				swordDamageHun = new FNFSprite(85, 500);
+				swordDamageHun.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/damage');
+				swordDamageHun.animation.addByPrefix('0', '0', 24, false);
+				swordDamageHun.animation.addByPrefix('1', '1', 24, false);
+				swordDamageHun.animation.addByPrefix('2', '2', 24, false);
+				swordDamageHun.animation.addByPrefix('3', '3', 24, false);
+				swordDamageHun.animation.addByPrefix('4', '4', 24, false);
+				swordDamageHun.animation.addByPrefix('5', '5', 24, false);
+				swordDamageHun.animation.addByPrefix('6', '6', 24, false);
+				swordDamageHun.animation.addByPrefix('7', '7', 24, false);
+				swordDamageHun.animation.addByPrefix('8', '8', 24, false);
+				swordDamageHun.animation.addByPrefix('9', '9', 24, false);
+				swordDamageHun.setGraphicSize(Std.int(swordDamageHun.width * 2));
+				swordDamageHun.antialiasing = true;
+
+				heartHealth = new FNFSprite(50, 600);
+				heartHealth.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/healthbar');
+				heartHealth.animation.addByPrefix('health1', 'health1', 24, false);
+				heartHealth.animation.addByPrefix('health2', 'health2', 24, false);
+				heartHealth.animation.addByPrefix('health3', 'health3', 24, false);
+				heartHealth.animation.addByPrefix('health4', 'health4', 24, false);
+				heartHealth.animation.addByPrefix('health5', 'health5', 24, false);
+				heartHealth.animation.addByPrefix('health6', 'health6', 24, false);
+				heartHealth.animation.addByPrefix('health7', 'health7', 24, false);
+				heartHealth.animation.addByPrefix('health8', 'health8', 24, false);
+				heartHealth.animation.addByPrefix('health9', 'health9', 24, false);
+				heartHealth.antialiasing = true;
+				heartHealth.animation.play('health1', true);
+
+				sliceAnim = new FNFSprite(165, 300);
+				sliceAnim.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/slice');
+				sliceAnim.animation.addByPrefix('slice', 'slice', 24, false);
+				sliceAnim.setGraphicSize(Std.int(sliceAnim.width * 0.75));
+				sliceAnim.antialiasing = true;
+				sliceAnim.updateHitbox();
+						
+				tHeart = new FNFSprite(190, 345);
+				tHeart.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/heart_break');
+				tHeart.animation.addByPrefix('die', 'white heart death', 24, false);
+				tHeart.antialiasing = true;
+				add(tHeart);
+
+				var gHeart:FlxSprite = new FNFSprite(700, 280).loadGraphic(Paths.image('backgrounds/' + curStage + '/bleu_hert'));
+				add(gHeart);
+
+				var bHeart:FlxSprite = new FNFSprite(1000, 600).loadGraphic(Paths.image('backgrounds/' + curStage + '/red_hert'));
+				add(bHeart);
 				
 			case 'spooky':
 				curStage = 'spooky';
@@ -558,6 +670,65 @@ class Stage extends FlxTypedGroup<FlxBasic>
 		// trace('update backgrounds');
 		switch (PlayState.curStage)
 		{
+			case 'doorway':
+				if ((curBeat == 24 || curBeat == 174) && PlayState.SONG.song.toLowerCase() == 'heartache'){
+					doorway_battle.alpha = 1;
+					doorway.alpha = 0;
+				}
+				if (curBeat == 102 && PlayState.SONG.song.toLowerCase() == 'heartache'){
+					doorway_battle.alpha = 0;
+					doorway.alpha = 1;
+				}
+				if (curBeat == 216 && PlayState.SONG.song.toLowerCase() == 'heartache'){
+					doorway_battle.alpha = 0;
+					doorway.alpha = 1;
+					if(PlayState.genocideHits >= 10){
+						foreground.add(sliceAnim);
+						sliceAnim.animation.play('slice');
+					}
+				}
+				if (curBeat == 218 && PlayState.SONG.song.toLowerCase() == 'heartache'){
+					if(PlayState.genocideHits >= 10){
+						foreground.add(heartHealth);
+					}
+					if(PlayState.genocideHits >= 10 && PlayState.genocideHits < 50){
+						remove(sliceAnim);
+						swordDamageTotal = 450 + PlayState.genocideHits * 10;
+						while(swordDamageTotal >= 100){
+							swordDamageHuns++;
+							swordDamageTotal = swordDamageTotal - 100;
+						}
+						while(swordDamageTotal >= 10){
+							swordDamageTens++;
+							swordDamageTotal = swordDamageTotal - 10;
+						}
+						swordDamageOnes = swordDamageTotal;
+						onesString = "" + swordDamageOnes;
+						tensString = "" + swordDamageTens;
+						hunsString = "" + swordDamageHuns;
+						foreground.add(swordDamageOne);
+						foreground.add(swordDamageTen);
+						foreground.add(swordDamageHun);
+						swordDamageOne.animation.play(onesString);
+						swordDamageTen.animation.play(tensString);
+						swordDamageHun.animation.play(hunsString);
+					}
+					else if(PlayState.genocideHits >= 50){
+						remove(sliceAnim);
+						foreground.add(swordDamageOne);
+						foreground.add(swordDamageTen);
+						foreground.add(swordDamageHun);
+						swordDamageOne.animation.play("9");
+						swordDamageTen.animation.play("9");
+						swordDamageHun.animation.play("9");
+					}
+				}
+				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits >= 10){
+					foreground.remove(swordDamageOne);
+					foreground.remove(swordDamageTen);
+					foreground.remove(swordDamageHun);
+					foreground.remove(heartHealth);
+				}
 			case 'highway':
 				// trace('highway update');
 				grpLimoDancers.forEach(function(dancer:BackgroundDancer)
@@ -568,7 +739,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				upperBoppers.animation.play('bop', true);
 				bottomBoppers.animation.play('bop', true);
 				santa.animation.play('idle', true);
-
+			case 'ruins':
+				froggitJam.animation.play('jam', true);
+				saveSymbol.animation.play('save', true);
 			case 'school':
 				bgGirls.dance();
 

@@ -133,6 +133,10 @@ class PlayState extends MusicBeatState
 
 	public static var daPixelZoom:Float = 6;
 	public static var determinedChartType:String = "";
+	
+	public static var genocideHits:Int = 0;
+	
+	public static var heartTick:Int = 1;
 
 	// strumlines
 	private var dadStrums:Strumline;
@@ -158,6 +162,8 @@ class PlayState extends MusicBeatState
 		combo = 0;
 		health = 1;
 		misses = 0;
+		genocideHits = 0;
+		heartTick = 1;
 		// sets up the combo object array
 		lastCombo = [];
 
@@ -343,6 +349,39 @@ class PlayState extends MusicBeatState
 		dialogueHUD = new FlxCamera();
 		dialogueHUD.bgColor.alpha = 0;
 		FlxG.cameras.add(dialogueHUD);
+		
+		if (SONG.song.toLowerCase() == 'heartache'){
+			var preloadBattleToriel:Character;
+			preloadBattleToriel = new Character(0, 0);
+			preloadBattleToriel.setCharacter(0, 0, 'battle-toriel');
+			add(preloadBattleToriel);
+			preloadBattleToriel.visible = false;
+			var preloadBattleBF:Character;
+			preloadBattleBF = new Character(0, 0, "bf", true);
+			preloadBattleBF.setCharacter(0, 0, 'bf-monochrome');
+			add(preloadBattleBF);
+			preloadBattleBF.visible = false;
+			var preloadBattleGF:Character;
+			preloadBattleGF = new Character(0, 0);
+			preloadBattleGF.setCharacter(0, 0, 'gf-monochrome');
+			add(preloadBattleGF);
+			preloadBattleGF.visible = false;
+			var preloadToriel:Character;
+			preloadToriel = new Character(0, 0);
+			preloadToriel.setCharacter(0, 0, 'heartache-toriel');
+			add(preloadToriel);
+			preloadToriel.visible = false;
+			var preloadBF:Character;
+			preloadBF = new Character(0, 0, "bf", true);
+			preloadBF.setCharacter(0, 0, 'bf');
+			add(preloadBF);
+			preloadBF.visible = false;
+			var preloadGF:Character;
+			preloadGF = new Character(0, 0);
+			preloadGF.setCharacter(0, 0, 'gf');
+			add(preloadGF);
+			preloadGF.visible = false;
+		}
 
 		// call the funny intro cutscene depending on the song
 		if (!skipCutscenes())
@@ -844,6 +883,11 @@ class PlayState extends MusicBeatState
 					increaseCombo(foundRating, coolNote.noteData, character);
 					popUpScore(foundRating, ratingTiming, characterStrums, coolNote);
 					healthCall(Timings.judgementsMap.get(foundRating)[3]);
+					trace("noteType is: " + coolNote.noteType);
+					if(coolNote.noteType == 3 && foundRating != 'miss' && foundRating != 'shit'){
+						genocideHits++;
+						trace("Genocide Hit!");
+					}
 				}
 				else if (coolNote.isSustainNote)
 				{
@@ -1355,6 +1399,47 @@ class PlayState extends MusicBeatState
 		if (songMusic.time > Conductor.songPosition + 20 || songMusic.time < Conductor.songPosition - 20)
 			resyncVocals();
 		//*/
+		if (curSong == 'Heartache'){
+			if(curStep >= 918 && genocideHits >= 10){
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+					{
+						//torielAlt.alpha -= 0.05;
+						gf.alpha -= 0.05;
+						boyfriend.alpha -= 0.05;
+						Stage.doorway.alpha -= 0.05;
+						camHUD.alpha -= 0.05;
+						if (gf.alpha > 0)
+						{
+							tmr.reset(0.5);
+						}
+					});
+			}
+			if(curStep == 864 && genocideHits >= 10){ //864 874 902 932 940
+				FlxG.sound.play(Paths.sound('slash'), 0.9);
+			}
+			if(curStep == 874 && genocideHits >= 10){ 
+				FlxG.sound.play(Paths.sound('damage'), 0.9);
+			}
+			if(curStep == 873 + heartTick && genocideHits >= 10){
+				if(heartTick < 9){
+					heartTick++;
+				}
+				var heartString:String = "health" + heartTick;
+				Stage.heartHealth.animation.play(heartString, true);
+			}
+			if(curStep == 902 && genocideHits >= 10){
+				FlxG.sound.play(Paths.sound('vaporize'), 0.9);
+			}
+			if(curStep == 918 && genocideHits >= 10){
+				Stage.tHeart.animation.play('die');
+			}
+			if(curStep == 932 && genocideHits >= 10){ 
+				FlxG.sound.play(Paths.sound('break1'), 0.9);
+			}
+			if(curStep == 940 && genocideHits >= 10){ 
+				FlxG.sound.play(Paths.sound('break2'), 0.9);
+			}
+		}
 	}
 
 	private function charactersDance(curBeat:Int)
@@ -1387,6 +1472,51 @@ class PlayState extends MusicBeatState
 			if (SONG.notes[Math.floor(curStep / 16)].changeBPM)
 			{
 				Conductor.changeBPM(SONG.notes[Math.floor(curStep / 16)].bpm);
+			}
+		}
+		
+		if((curBeat == 24 || curBeat == 174) && curSong == "Heartache"){
+			gf.setCharacter(400, 130, "gf-monochrome");
+			dadOpponent.setCharacter(100, 100, "battle-toriel");
+			boyfriend.setCharacter(770, 450, "bf-monochrome");
+		}
+		
+		if(curBeat == 102 && curSong == "Heartache"){
+			gf.setCharacter(400, 130, "gf");
+			dadOpponent.setCharacter(100, 100, "heartache-toriel");
+			boyfriend.setCharacter(770, 450, "bf");
+		}
+		
+		if(curBeat == 216 && curSong == "Heartache"){
+			gf.setCharacter(400, 130, "gf");
+			dadOpponent.setCharacter(100, 100, "heartache-toriel");
+			boyfriend.setCharacter(770, 450, "bf");
+		}
+		
+		if(curBeat == 218 && curSong == "Heartache"){
+			if(genocideHits < 50 && genocideHits >= 10){
+				dadOpponent.playAnim('neutral', false);
+			}
+			else if(genocideHits >= 50){
+				dadOpponent.playAnim('genocide', false);
+			}
+			else{
+				dadOpponent.playAnim('insufficient', false);
+			}
+		}
+		
+		if(curBeat == 221 && curSong == "Heartache"){
+			if(genocideHits >= 10){
+				dadOpponent.playAnim('genuflect', false);
+			}
+			else{
+				dadOpponent.playAnim('idle');
+			}
+		}
+		
+		if(curBeat == 225 && curSong == "Heartache"){
+			if(genocideHits >= 10){
+				dadOpponent.playAnim('dusted', false);
 			}
 		}
 
