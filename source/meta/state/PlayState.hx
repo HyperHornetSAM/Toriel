@@ -137,6 +137,8 @@ class PlayState extends MusicBeatState
 	public static var genocideHits:Int = 0;
 	
 	public static var heartTick:Int = 1;
+	
+	public var currentlyDancing:Bool = true;
 
 	// strumlines
 	private var dadStrums:Strumline;
@@ -447,7 +449,7 @@ class PlayState extends MusicBeatState
 				dialogueBox.curPage += 1;
 
 				if (dialogueBox.curPage == dialogueBox.dialogueData.dialogue.length)
-					dialogueBox.closeDialog()
+					dialogueBox.closeDialog();
 				else
 					dialogueBox.updateDialog();
 			}
@@ -916,7 +918,8 @@ class PlayState extends MusicBeatState
 		{
 			var stringDirection:String = UIStaticArrow.getArrowFromNumber(direction);
 
-			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+			//FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+			FlxG.sound.play(Paths.sound('hurt'));
 			character.playAnim('sing' + stringDirection.toUpperCase() + 'miss', lockMiss);
 		}
 		decreaseCombo(popMiss);
@@ -1239,6 +1242,11 @@ class PlayState extends MusicBeatState
 				if (combo < 0)
 					combo = 0;
 				combo += 1;
+				if (combo == 100 || combo == 200 || combo == 300){
+					gf.playAnim('cheer');
+					FlxG.sound.play(Paths.sound('combo'), 1, false);
+					currentlyDancing = false;
+				}
 			}
 			else
 				missNoteCheck(true, direction, character, false, true);
@@ -1458,6 +1466,11 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+		
+		if(currentlyDancing == false){
+			gf.playAnim('danceLeft');
+			currentlyDancing = true;
+		}
 
 		if ((FlxG.camera.zoom < 1.35 && curBeat % 4 == 0) && (!Init.trueSettings.get('Reduced Movements')))
 		{
@@ -1491,6 +1504,9 @@ class PlayState extends MusicBeatState
 			gf.setCharacter(400, 130, "gf");
 			dadOpponent.setCharacter(100, 100, "heartache-toriel");
 			boyfriend.setCharacter(770, 450, "bf");
+			if (genocideHits < 10){
+				dadOpponent.playAnim('insufficient', false);
+			}
 		}
 		
 		if(curBeat == 218 && curSong == "Heartache"){
@@ -1501,7 +1517,7 @@ class PlayState extends MusicBeatState
 				dadOpponent.playAnim('genocide', false);
 			}
 			else{
-				dadOpponent.playAnim('insufficient', false);
+				dadOpponent.playAnim('idle', false);
 			}
 		}
 		
@@ -1509,9 +1525,9 @@ class PlayState extends MusicBeatState
 			if(genocideHits >= 10){
 				dadOpponent.playAnim('genuflect', false);
 			}
-			else{
+			/*else{
 				dadOpponent.playAnim('idle');
-			}
+			}*/
 		}
 		
 		if(curBeat == 225 && curSong == "Heartache"){
@@ -1595,6 +1611,9 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		if(SONG.song.toLowerCase() == 'heartache'){
+			endSongEvent = true;
+		}
 		canPause = false;
 		songMusic.volume = 0;
 		vocals.volume = 0;
@@ -1628,7 +1647,7 @@ class PlayState extends MusicBeatState
 
 				// save the week's score if the score is valid
 				if (SONG.validScore)
-					Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+				Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 
 				// flush the save
 				FlxG.save.flush();
@@ -1643,6 +1662,8 @@ class PlayState extends MusicBeatState
 	{
 		switch (SONG.song.toLowerCase())
 		{
+			case 'heartache':
+				callTextboxTwo();
 			case 'eggnog':
 				// make the lights go out
 				var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
@@ -1786,6 +1807,25 @@ class PlayState extends MusicBeatState
 		else
 			startCountdown();
 	}
+	
+	function callTextboxTwo() {
+		var dialogPath = Paths.json(SONG.song.toLowerCase() + '/ending');
+		if (sys.FileSystem.exists(dialogPath))
+		{
+			
+			dialogueBox.destroy();
+			//startedCountdown = false;
+
+			dialogueBox = DialogueBox.createDialogue(sys.io.File.getContent(dialogPath));
+			dialogueBox.cameras = [dialogueHUD];
+			dialogueBox.whenDaFinish = actualEnding;
+
+			add(dialogueBox);
+		}
+		else{
+			actualEnding();
+		}
+	}
 
 	public static function skipCutscenes():Bool {
 		// pretty messy but an if statement is messier
@@ -1810,6 +1850,26 @@ class PlayState extends MusicBeatState
 
 	public static var swagCounter:Int = 0;
 
+	function actualEnding()
+	{
+		// play menu music
+		ForeverTools.resetMenuMusic();
+
+		// set up transitions
+		transIn = FlxTransitionableState.defaultTransIn;
+		transOut = FlxTransitionableState.defaultTransOut;
+
+		// change to the menu state
+		Main.switchState(this, new StoryMenuState());
+
+		// save the week's score if the score is valid
+		if (SONG.validScore)
+		Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
+
+		// flush the save
+		FlxG.save.flush();
+		
+	}
 	private function startCountdown():Void
 	{
 		inCutscene = false;

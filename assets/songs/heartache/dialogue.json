@@ -1,0 +1,47 @@
+{
+    "box": "transparent",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "heartache",
+            "expression": "shotone",
+	    "text": ""
+        },
+        {
+            "expression": "shottwo",
+            "text": ""
+        },
+        {
+            "expression": "shotthree",
+            "text": ""
+        },
+	{
+	    "expression": "shotfour",
+            "text": ""
+	},
+	{
+	    "expression": "shotfive",
+            "text": ""
+	},
+	{
+	    "expression": "shotsix",
+            "text": ""
+	},
+	{
+	    "expression": "shotseven",
+            "text": ""
+	},
+	{
+	    "expression": "shoteight",
+            "text": ""
+	},
+	{
+	    "expression": "shotnine",
+            "text": ""
+	},
+	{
+	    "expression": "shotten",
+            "text": ""
+	}
+    ]
+}

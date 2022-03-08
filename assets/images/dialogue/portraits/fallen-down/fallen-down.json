@@ -1,0 +1,17 @@
+{
+    "name": "fallen-down",
+    "expressions": {
+        "shotone": "shotone",
+	"shottwo": "shottwo",
+	"shotthree": "shotthree",
+	"shotfour": "shotfour"
+    },
+    "position": [-620, -340],
+    "scale": 0.52,
+    "antialiasing": true,
+    "loop": false,
+
+    "sounds": ["underText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "ruins",
+    "expressions": {
+        "shotone": "shot20000",
+	"shottwo": "shot20001",
+	"shotthree": "shot20002",
+	"shotfour": "shot20003"
+    },
+    "position": [-620, -340],
+    "scale": 0.52,
+    "antialiasing": true,
+    "loop": false,
+
+    "sounds": ["underText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

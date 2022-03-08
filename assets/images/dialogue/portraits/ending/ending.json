@@ -1,0 +1,17 @@
+{
+    "name": "ending",
+    "expressions": {
+        "shotone": "shot40000",
+	"shottwo": "shot40001",
+	"shotthree": "shot40002",
+	"shotfour": "shot40003"
+    },
+    "position": [-455, -240],
+    "scale": 0.60,
+    "antialiasing": true,
+    "loop": false,
+
+    "sounds": ["underText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

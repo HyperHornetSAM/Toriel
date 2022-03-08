@@ -490,6 +490,7 @@ class DialogueBox extends FlxSpriteGroup
 	// WOAH THE CODIST I LOVE MARIO!!!
 	public function closeDialog()
 	{
+		trace("k we got this far I guess");
 		whenDaFinish();
 		alphabetText.playSounds = false;
 		kill();

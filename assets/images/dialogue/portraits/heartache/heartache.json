@@ -1,0 +1,23 @@
+{
+    "name": "heartache",
+    "expressions": {
+        "shotone": "shot30000",
+	"shottwo": "shot30001",
+	"shotthree": "shot30002",
+	"shotfour": "shot30003",
+	"shotfive": "shot30004",
+	"shotsix": "shot30005",
+	"shotseven": "shot30006",
+	"shoteight": "shot30007",
+	"shotnine": "shot30008",
+	"shotten": "shot30009"
+    },
+    "position": [-170, -90],
+    "scale": 0.8,
+    "antialiasing": true,
+    "loop": false,
+
+    "sounds": ["underText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

@@ -1,0 +1,23 @@
+{
+    "box": "transparent",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "fallen-down",
+            "expression": "shotone",
+	    "text": ""
+        },
+        {
+	    "expression": "shottwo",
+	    "text": ""
+        },
+        {
+	    "expression": "shotthree",
+	    "text": ""
+        },
+	{
+	    "expression": "shotfour",
+	    "text": ""
+	}
+    ]
+}

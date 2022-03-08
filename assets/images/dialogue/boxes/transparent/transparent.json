@@ -1,0 +1,9 @@
+{
+    "position": [0, 0],
+    "states": {
+        "normal": {
+            "open": ["transparent box"],
+            "default": ["transparent box", [-30, 0]]
+        }
+    }
+}
