@@ -37,6 +37,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 
 	public var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	
+	public var RuinsDancers:FlxTypedGroup<BackgroundRuins>;
+	
 	public var swordDamageTotal:Int;
 	
 	public var swordDamageOnes:Int;
@@ -63,8 +65,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var gHeart:FNFSprite;
 	var sliceAnim:FNFSprite;
 	public static var heartHealth:FNFSprite;
-	var froggitJam:FNFSprite;
-	var saveSymbol:FNFSprite;
+	var froggitJam:BackgroundRuins;
+	var saveSymbol:BackgroundRuins;
 
 	var bgGirls:BackgroundGirls;
 
@@ -157,20 +159,17 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				wall.scrollFactor.set(0.8, 0.95);
 				wall.active = false;
 				add(wall);
-
-				froggitJam = new FNFSprite(-325, 350);
-				froggitJam.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/froggit_jam');
-				froggitJam.setGraphicSize(Std.int(froggitJam.width * 0.8));
-				froggitJam.animation.addByPrefix('jam', 'froggit vibe', 24, false);
-				froggitJam.antialiasing = true;
-				add(froggitJam);
 				
-				saveSymbol = new FNFSprite(1410, 800);
+				RuinsDancers = new FlxTypedGroup<BackgroundRuins>();
+				add(RuinsDancers);
+
+				froggitJam = new BackgroundRuins(-325, 350, false);
+				froggitJam.setGraphicSize(Std.int(froggitJam.width * 0.8));
+				RuinsDancers.add(froggitJam);
+				
+				saveSymbol = new BackgroundRuins(1410, 800, true);
 				saveSymbol.setGraphicSize(Std.int(saveSymbol.width * 2));
-				saveSymbol.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/SAVE_symbol');
-				saveSymbol.animation.addByPrefix('save', 'SAVE symbol', 24, false);
-				saveSymbol.antialiasing = true;
-				add(saveSymbol);
+				RuinsDancers.add(saveSymbol);
 				
 			case 'doorway':
 				curStage = 'doorway';
@@ -729,6 +728,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					foreground.remove(swordDamageHun);
 					foreground.remove(heartHealth);
 				}
+			case 'ruins':
+				froggitJam.dance();
+				saveSymbol.dance();
 			case 'highway':
 				// trace('highway update');
 				grpLimoDancers.forEach(function(dancer:BackgroundDancer)
