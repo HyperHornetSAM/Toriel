@@ -136,6 +136,9 @@ class PlayState extends MusicBeatState
 	
 	public static var genocideHits:Int = 0;
 	
+	public var torielHelp:Bool = false;
+	public var healSoundOff:Bool = false;
+	
 	public static var heartTick:Int = 1;
 	
 	public var currentlyDancing:Bool = true;
@@ -619,6 +622,20 @@ class PlayState extends MusicBeatState
 			}
 
 			noteCalls();
+		}
+		if(SONG.song.toLowerCase() == 'heartache'){
+			if (health < 0.5){
+				if(torielHelp == false){
+					FlxG.sound.play(Paths.sound('heal'), 1, false);
+				}
+				torielHelp = true;
+			}
+			if (health >= 0.5){
+				torielHelp = false;
+			}
+		}
+		if(torielHelp){
+			health += (0.005 * (curBeat / 50));
 		}
 
 	}
