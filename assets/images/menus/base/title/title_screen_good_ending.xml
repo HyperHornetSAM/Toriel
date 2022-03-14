@@ -2,28 +2,34 @@
 <TextureAtlas imagePath="title_screen_good_ending.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="toriel good ending0000" x="0" y="0" width="453" height="631" pivotX="225.9" pivotY="326" frameX="0" frameY="-22" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0001" x="463" y="0" width="449" height="633" frameX="-2" frameY="-20" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0002" x="922" y="0" width="445" height="636" frameX="-4" frameY="-17" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0003" x="1377" y="0" width="441" height="638" frameX="-6" frameY="-15" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0004" x="1828" y="0" width="438" height="640" frameX="-7" frameY="-13" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0005" x="2276" y="0" width="435" height="642" frameX="-9" frameY="-11" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0006" x="2721" y="0" width="433" height="644" frameX="-10" frameY="-9" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0007" x="3164" y="0" width="431" height="646" frameX="-11" frameY="-7" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0008" x="3605" y="0" width="429" height="647" frameX="-12" frameY="-6" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0009" x="0" y="657" width="427" height="649" frameX="-13" frameY="-4" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0010" x="437" y="657" width="426" height="650" frameX="-13" frameY="-3" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0011" x="873" y="657" width="425" height="651" frameX="-14" frameY="-2" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0012" x="1308" y="657" width="425" height="651" frameX="-14" frameY="-2" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0013" x="1743" y="657" width="425" height="652" frameX="-14" frameY="-1" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0014" x="2178" y="657" width="425" height="652" frameX="-14" frameY="-1" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0015" x="2613" y="657" width="426" height="653" frameX="-13" frameY="0" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0016" x="3049" y="657" width="427" height="653" frameX="-13" frameY="0" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0017" x="3486" y="657" width="429" height="652" frameX="-12" frameY="-1" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0018" x="0" y="1320" width="431" height="651" frameX="-11" frameY="-2" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0019" x="441" y="1320" width="434" height="649" frameX="-9" frameY="-4" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0020" x="885" y="1320" width="437" height="647" frameX="-8" frameY="-6" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0021" x="1332" y="1320" width="441" height="643" frameX="-6" frameY="-10" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0022" x="1783" y="1320" width="445" height="639" frameX="-4" frameY="-14" frameWidth="453" frameHeight="653"/>
-	<SubTexture name="toriel good ending0023" x="2238" y="1320" width="450" height="633" frameX="-1" frameY="-19" frameWidth="453" frameHeight="653"/>
+	<SubTexture name="toriel good ending0000" x="10" y="10" width="903" height="1259" frameX="0" frameY="-17" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0001" x="923" y="10" width="901" height="1262" frameX="-1" frameY="-15" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0002" x="1834" y="10" width="899" height="1264" frameX="-2" frameY="-13" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0003" x="2743" y="10" width="895" height="1265" frameX="-4" frameY="-12" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0004" x="3648" y="10" width="893" height="1267" frameX="-5" frameY="-10" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0005" x="4551" y="10" width="891" height="1268" frameX="-6" frameY="-9" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0006" x="5452" y="10" width="889" height="1270" frameX="-7" frameY="-7" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0007" x="6351" y="10" width="889" height="1271" frameX="-7" frameY="-6" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0008" x="7250" y="10" width="887" height="1272" frameX="-8" frameY="-5" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0009" x="10" y="1292" width="885" height="1273" frameX="-9" frameY="-4" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0010" x="905" y="1292" width="885" height="1274" frameX="-9" frameY="-3" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0011" x="1800" y="1292" width="884" height="1275" frameX="-9" frameY="-2" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0012" x="2694" y="1292" width="883" height="1276" frameX="-10" frameY="-1" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0013" x="3587" y="1292" width="883" height="1276" frameX="-10" frameY="-1" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0014" x="4480" y="1292" width="883" height="1277" frameX="-10" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0015" x="5373" y="1292" width="883" height="1277" frameX="-10" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0016" x="6266" y="1292" width="883" height="1277" frameX="-10" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0017" x="7159" y="1292" width="883" height="1277" frameX="-10" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0018" x="10" y="2579" width="885" height="1277" frameX="-9" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0019" x="905" y="2579" width="885" height="1277" frameX="-9" frameY="0" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0020" x="1800" y="2579" width="887" height="1276" frameX="-8" frameY="-1" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0021" x="2697" y="2579" width="887" height="1275" frameX="-8" frameY="-2" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0022" x="3594" y="2579" width="889" height="1274" frameX="-7" frameY="-3" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0023" x="4493" y="2579" width="891" height="1273" frameX="-6" frameY="-4" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0024" x="5394" y="2579" width="893" height="1271" frameX="-5" frameY="-6" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0025" x="6297" y="2579" width="894" height="1269" frameX="-4" frameY="-8" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0026" x="7201" y="2579" width="897" height="1267" frameX="-3" frameY="-10" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0027" x="10" y="3866" width="899" height="1264" frameX="-2" frameY="-12" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0028" x="919" y="3866" width="901" height="1261" frameX="-1" frameY="-15" frameWidth="903" frameHeight="1277"/>
+	<SubTexture name="toriel good ending0029" x="10" y="10" width="903" height="1259" frameX="0" frameY="-17" frameWidth="903" frameHeight="1277"/>
 </TextureAtlas>

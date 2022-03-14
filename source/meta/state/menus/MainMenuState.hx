@@ -13,6 +13,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import meta.MusicBeat.MusicBeatState;
 import meta.data.dependency.Discord;
+import meta.data.Ending;
 
 using StringTools;
 
@@ -26,11 +27,9 @@ class MainMenuState extends MusicBeatState
 	var curSelected:Float = 0;
 
 	var bg:FlxSprite; // the background has been separated for more control
-	var storypic_1:FlxSprite;
-	var storypic_2:FlxSprite;
-	var freeplay:FlxSprite;
-	var options_1:FlxSprite;
-	var options_2:FlxSprite;
+	var storypic:FlxSprite;
+	var freeplaypic:FlxSprite;
+	var optionspic:FlxSprite;
 	var heart:FlxSprite;
 	
 	var magenta:FlxSprite;
@@ -66,41 +65,34 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 		
-		storypic_1 = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/story1'));
-		storypic_2 = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/story2'));
-		freeplay = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/freeplay'));
-		options_1 = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/options1'));
-		options_2 = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/options2'));
+		storypic = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/story1'));
+		freeplaypic = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/freeplay'));
+		optionspic = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/options1'));
 		
-		storypic_1.antialiasing = true;
-		storypic_2.antialiasing = true;
-		freeplay.antialiasing = true;
-		options_1.antialiasing = true;
-		options_2.antialiasing = true;
+		if(Ending.getStatus() == 'genocide'){
+			storypic = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/story2'));
+			optionspic = new FlxSprite(600, 150).loadGraphic(Paths.image('menus/base/mainmenu/options2'));
+		}
 		
-		storypic_1.alpha = 0;
-		storypic_2.alpha = 0;
-		freeplay.alpha = 0;
-		options_1.alpha = 0;
-		options_2.alpha = 0;
+		storypic.antialiasing = true;
+		freeplaypic.antialiasing = true;
+		optionspic.antialiasing = true;
 		
-		storypic_1.setGraphicSize(Std.int(storypic_1.width * 0.6));
-		storypic_2.setGraphicSize(Std.int(storypic_2.width * 0.6));
-		freeplay.setGraphicSize(Std.int(freeplay.width * 0.6));
-		options_1.setGraphicSize(Std.int(options_1.width * 0.6));
-		options_2.setGraphicSize(Std.int(options_2.width * 0.6));
+		storypic.alpha = 0;
+		freeplaypic.alpha = 0;
+		optionspic.alpha = 0;
 		
-		storypic_1.updateHitbox();
-		storypic_2.updateHitbox();
-		freeplay.updateHitbox();
-		options_1.updateHitbox();
-		options_2.updateHitbox();
+		storypic.setGraphicSize(Std.int(storypic.width * 0.6));
+		freeplaypic.setGraphicSize(Std.int(freeplaypic.width * 0.6));
+		optionspic.setGraphicSize(Std.int(optionspic.width * 0.6));
 		
-		add(storypic_1);
-		add(storypic_2);
-		add(freeplay);
-		add(options_1);
-		add(options_2);
+		storypic.updateHitbox();
+		freeplaypic.updateHitbox();
+		optionspic.updateHitbox();
+		
+		add(storypic);
+		add(freeplaypic);
+		add(optionspic);
 		
 		heart = new FlxSprite(10, 205);
 		heart.frames = Paths.getSparrowAtlas('menus/base/mainmenu/heart');
@@ -109,6 +101,9 @@ class MainMenuState extends MusicBeatState
 		heart.setGraphicSize(Std.int(heart.width * 0.8));
 		heart.animation.play('beat');
 		add(heart);
+		
+		var endingString:String = Ending.getStatus();
+		trace("We have a " + endingString + " ending.");
 
 		// create the menu items themselves
 		var tex = Paths.getSparrowAtlas('menus/base/title/FNF_main_menu_assets');
@@ -209,19 +204,19 @@ class MainMenuState extends MusicBeatState
 		
 		switch(curSelected){
 			case 0:
-				storypic_1.alpha = 1;
-				freeplay.alpha = 0;
-				options_1.alpha = 0;
+				storypic.alpha = 1;
+				freeplaypic.alpha = 0;
+				optionspic.alpha = 0;
 				heart.y = 205;
 			case 1:
-				storypic_1.alpha = 0;
-				freeplay.alpha = 1;
-				options_1.alpha = 0;
+				storypic.alpha = 0;
+				freeplaypic.alpha = 1;
+				optionspic.alpha = 0;
 				heart.y = 350;
 			case 2:
-				storypic_1.alpha = 0;
-				freeplay.alpha = 0;
-				options_1.alpha = 1;
+				storypic.alpha = 0;
+				freeplaypic.alpha = 0;
+				optionspic.alpha = 1;
 				heart.y = 495;
 		}
 

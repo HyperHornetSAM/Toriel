@@ -38,7 +38,7 @@ using StringTools;
 **/
 class TitleState extends MusicBeatState
 {
-	static var initialized:Bool = false;
+	public static var initialized:Bool = false;
 
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
@@ -60,10 +60,10 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var torielTitle:FlxSprite;
+	var torielSparedTitle:FlxSprite;
 	var subtitle:FlxSprite;
 
 	function startIntro()
@@ -106,14 +106,28 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('pulse');
 		logoBl.updateHitbox();
 		
-		torielTitle = new FlxSprite(FlxG.width * 0.25, FlxG.height * 0.15);
+		torielTitle = new FlxSprite(300, 120);
 		torielTitle.frames = Paths.getSparrowAtlas('menus/base/title/title_screen_neutral');
+		torielTitle.setGraphicSize(Std.int(torielTitle.width * .5));
 		torielTitle.animation.addByPrefix('pray', 'neutral pray', 24);
-		torielTitle.setGraphicSize(Std.int(torielTitle.width * 1));
-		torielTitle.antialiasing = true;
 		torielTitle.animation.play('pray');
+		torielTitle.antialiasing = true;
 		torielTitle.updateHitbox();
-		add(torielTitle);
+		
+		torielSparedTitle = new FlxSprite(425, 120);
+		torielSparedTitle.frames = Paths.getSparrowAtlas('menus/base/title/title_screen_good_ending');
+		torielSparedTitle.setGraphicSize(Std.int(torielSparedTitle.width * .5));
+		torielSparedTitle.animation.addByPrefix('spared', 'toriel good ending', 24);
+		torielSparedTitle.animation.play('spared');
+		torielSparedTitle.antialiasing = true;
+		torielSparedTitle.updateHitbox();
+		
+		if(Ending.getStatus() == 'neutral'){
+			add(torielTitle);
+		}
+		else if(Ending.getStatus() == 'pacifist'){
+			add(torielSparedTitle);
+		}
 		
 		add(logoBl);
 		
@@ -124,7 +138,9 @@ class TitleState extends MusicBeatState
 		subtitle.animation.play('pulse');
 		subtitle.updateHitbox();
 		// subtitle.screenCenter(X);
-		add(subtitle);
+		if(Ending.getStatus() != 'genocide'){
+			add(subtitle);
+		}
 
 		credGroup = new FlxGroup();
 		add(credGroup);
@@ -133,7 +149,7 @@ class TitleState extends MusicBeatState
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		credGroup.add(blackScreen);
 
-		credTextShit = new Alphabet(0, 0, "ninjamuffin99\nPhantomArcade\nkawaisprite\nevilsk8er", true);
+		credTextShit = new Alphabet(0, 0, "keno\nhypersam\nzipcorner", true);
 		credTextShit.screenCenter();
 
 		// credTextShit.alignment = CENTER;
@@ -164,6 +180,9 @@ class TitleState extends MusicBeatState
 		if (Assets.exists(Paths.txt('introText')))
 		{
 			var fullText:String = Assets.getText(Paths.txt('introText'));
+			if(Ending.getStatus() == 'genocide'){
+				fullText = Assets.getText(Paths.txt('introText2'));
+			}
 			var firstArray:Array<String> = fullText.split('\n');
 
 			for (i in firstArray)
@@ -285,6 +304,19 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
 
+		/*if(Ending.getStatus() == 'neutral'){
+			if (danceLeft)
+				torielTitle.animation.play('danceRight');
+			else
+				torielTitle.animation.play('danceLeft');
+		}
+		else if(Ending.getStatus() == 'pacifist'){
+			if (danceLeft)
+				torielSparedTitle.animation.play('danceRight');
+			else
+				torielSparedTitle.animation.play('danceLeft');
+		}*/
+		
 		FlxG.log.add(curBeat);
 
 		switch (curBeat)

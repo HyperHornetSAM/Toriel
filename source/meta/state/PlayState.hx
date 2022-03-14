@@ -1680,6 +1680,15 @@ class PlayState extends MusicBeatState
 		switch (SONG.song.toLowerCase())
 		{
 			case 'heartache':
+				if (genocideHits < 10){
+					Ending.setStatus("pacifist");
+				}
+				else if (genocideHits >= 10 && genocideHits < 50){
+					Ending.setStatus("neutral");
+				}
+				else{
+					Ending.setStatus("genocide");
+				}
 				callTextboxTwo();
 			case 'eggnog':
 				// make the lights go out
@@ -1827,9 +1836,8 @@ class PlayState extends MusicBeatState
 	
 	function callTextboxTwo() {
 		var dialogPath = Paths.json(SONG.song.toLowerCase() + '/ending');
-		if (sys.FileSystem.exists(dialogPath))
+		if (sys.FileSystem.exists(dialogPath) && Ending.getStatus() == 'pacifist')
 		{
-			
 			dialogueBox.destroy();
 			//startedCountdown = false;
 
@@ -1877,7 +1885,8 @@ class PlayState extends MusicBeatState
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		// change to the menu state
-		Main.switchState(this, new StoryMenuState());
+		TitleState.initialized = false;
+		Main.switchState(this, new TitleState());
 
 		// save the week's score if the score is valid
 		if (SONG.validScore)

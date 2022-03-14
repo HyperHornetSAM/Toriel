@@ -5,6 +5,7 @@ import flixel.input.keyboard.FlxKey;
 import meta.CoolUtil;
 import meta.InfoHud;
 import meta.data.Highscore;
+import meta.data.Ending;
 import meta.data.dependency.Discord;
 import meta.state.*;
 import meta.state.charting.*;
@@ -195,7 +196,7 @@ class Init extends FlxState
 	{
 		FlxG.save.bind('foreverengine-options');
 		Highscore.load();
-
+		Ending.loadStatus();
 		loadSettings();
 		loadControls();
 
