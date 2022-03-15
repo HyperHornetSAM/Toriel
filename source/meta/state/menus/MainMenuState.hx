@@ -114,8 +114,15 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, 200 + (i * 150));
 			menuItem.frames = tex;
 			// add the animations in a cool way (real
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+			if(i == 1 && Ending.getStatus() == 'genocide'){
+				menuItem.animation.addByPrefix('idle', "SAVE symbol", 12);
+				menuItem.animation.addByPrefix('selected', "SAVE symbol", 12);
+				menuItem.y -= 20;
+			}
+			else{
+				menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
+				menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+			}
 			menuItem.setGraphicSize(Std.int(menuItem.width * 0.6));
 			menuItem.animation.play('idle');
 			canSnap[i] = -1;
@@ -249,9 +256,22 @@ class MainMenuState extends MusicBeatState
 						switch (daChoice)
 						{
 							case 'story mode':
-								Main.switchState(this, new StoryMenuState());
+								if(Ending.getStatus() == 'genocide'){
+									Main.switchState(this, new FakeStoryMenuState());
+								}
+								else{
+									Main.switchState(this, new StoryMenuState());
+								}
 							case 'freeplay':
-								Main.switchState(this, new FreeplayState());
+								if(Ending.getStatus() == 'genocide'){
+									Ending.setStatus('neutral');
+									ForeverTools.resetMenuMusic();
+									TitleState.initialized = false;
+									Main.switchState(this, new TitleState());
+								}
+								else{
+									Main.switchState(this, new FreeplayState());
+								}
 							case 'options':
 								transIn = FlxTransitionableState.defaultTransIn;
 								transOut = FlxTransitionableState.defaultTransOut;

@@ -21,6 +21,9 @@ class ForeverTools
 			if(Ending.getStatus() == 'genocide'){
 				song = Paths.music('deadToriel');
 			}
+			else{
+				song = Paths.music('freakyMenu');
+			}
 			FlxG.sound.playMusic(song, (resetVolume) ? 0 : 0.7);
 			if (resetVolume)
 				FlxG.sound.music.fadeIn(4, 0, 0.7);

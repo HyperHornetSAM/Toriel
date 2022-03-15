@@ -1,0 +1,15 @@
+{
+    "name": "transparent",
+    "expressions": {
+        "normal": "transparent box"
+    },
+    "position": [0, 0],
+    "scale": 1,
+    "flipX": true,
+    "antialiasing": false,
+    "loop": false,
+
+    "sounds": ["underText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}
