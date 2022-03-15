@@ -1,11 +1,11 @@
 {
-    "box": "speech_bubble_talking",
+    "box": "transparent",
     "boxState": "normal",
     "dialogue": [
         {
             "portrait": "transparent",
             "expression": "normal",
-            "text": "But nobody came."
+            "text": "* But nobody came."
         }
     ]
 }

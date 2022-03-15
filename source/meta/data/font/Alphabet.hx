@@ -368,6 +368,9 @@ class AlphaCharacter extends FlxSprite
 
 		y = (110 - height);
 		y += row * 50;
+		if(letter == 'y'){
+			y += 12;
+		}
 	}
 
 	public function createNumber(letter:String):Void
@@ -407,6 +410,11 @@ class AlphaCharacter extends FlxSprite
 				animation.play(letter);
 				setGraphicSize(10, 10);
 				y += 48;
+			case "*":
+				animation.addByPrefix(letter, '*', 24);
+				animation.play(letter);
+				setGraphicSize(24, 16);
+				y += 28;
 			default:
 				animation.addByPrefix(letter, letter, 24);
 				animation.play(letter);

@@ -20,6 +20,12 @@ class FakeStoryMenuState extends MusicBeatState
 	
 	override function create()
 	{
+		var bggrid:FlxSprite = new FlxSprite(20, 40).loadGraphic(Paths.image('menus/base/storymenu/bggrid'));
+		bggrid.setGraphicSize(Std.int(bggrid.width * 1));
+		bggrid.updateHitbox();
+		bggrid.antialiasing = true;
+		add(bggrid);
+		
 		dialogueHUD = new FlxCamera();
 		dialogueHUD.bgColor.alpha = 0;
 		FlxG.cameras.add(dialogueHUD);
