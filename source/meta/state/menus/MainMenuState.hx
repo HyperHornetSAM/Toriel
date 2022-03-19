@@ -34,6 +34,7 @@ class MainMenuState extends MusicBeatState
 	
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
+	//var changeMusic:Bool;
 
 	var optionShit:Array<String> = ['story mode', 'freeplay', 'options'];
 	var canSnap:Array<Float> = [];
@@ -265,7 +266,7 @@ class MainMenuState extends MusicBeatState
 							case 'freeplay':
 								if(Ending.getStatus() == 'genocide'){
 									Ending.setStatus('neutral');
-									ForeverTools.resetMenuMusic();
+									Ending.changeMusic = true;
 									TitleState.initialized = false;
 									Main.switchState(this, new TitleState());
 								}

@@ -15,7 +15,7 @@ class ForeverTools
 	public static function resetMenuMusic(resetVolume:Bool = false)
 	{
 		// make sure the music is playing
-		if (((FlxG.sound.music != null) && (!FlxG.sound.music.playing)) || (FlxG.sound.music == null))
+		if (((FlxG.sound.music != null) && (!FlxG.sound.music.playing)) || (FlxG.sound.music == null) || Ending.changeMusic == true)
 		{
 			var song = (Init.trueSettings.get("Custom Titlescreen") ? Paths.music('foreverMenu') : Paths.music('freakyMenu'));
 			if(Ending.getStatus() == 'genocide'){
@@ -29,6 +29,7 @@ class ForeverTools
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 			// placeholder bpm
 			Conductor.changeBPM(102);
+			Ending.changeMusic = false;
 		}
 		//
 	}

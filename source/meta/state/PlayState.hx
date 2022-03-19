@@ -156,6 +156,8 @@ class PlayState extends MusicBeatState
 	public static var lastRating:FlxSprite;
 	// stores the last combo objects in an array
 	public static var lastCombo:Array<FlxSprite>;
+	
+	var sound:FlxSound;
 
 	// at the beginning of the playstate
 	override public function create()
@@ -442,17 +444,31 @@ class PlayState extends MusicBeatState
 		// dialogue checks
 		if (dialogueBox != null && dialogueBox.alive) {
 			// wheee the shift closes the dialogue
-			if (FlxG.keys.justPressed.SHIFT)
+			if (FlxG.keys.justPressed.SHIFT){
+				if(curSong.toLowerCase() == 'ruins' || curSong.toLowerCase() == 'heartache' || curSong.toLowerCase() == 'fallen-down'){
+					sound.fadeOut(2.2, 0);
+				}
 				dialogueBox.closeDialog();
-
+			}
 			// the change I made was just so that it would only take accept inputs
 			if (controls.ACCEPT && dialogueBox.textStarted)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				dialogueBox.curPage += 1;
-
-				if (dialogueBox.curPage == dialogueBox.dialogueData.dialogue.length)
+				
+				if(dialogueBox.curPage == 6 && curSong.toLowerCase() == 'heartache'){
+					sound.stop();
+					sound = new FlxSound().loadEmbedded(Paths.music('heartache_cutsceneloop'),true);
+					sound.volume = 0;
+					FlxG.sound.list.add(sound);
+					sound.fadeIn(1, 0, 0.8);
+				}
+				if (dialogueBox.curPage == dialogueBox.dialogueData.dialogue.length){
+					if(curSong.toLowerCase() == 'ruins' || curSong.toLowerCase() == 'heartache' || curSong.toLowerCase() == 'fallen-down'){
+						sound.fadeOut(2.2, 0);
+					}
 					dialogueBox.closeDialog();
+				}
 				else
 					dialogueBox.updateDialog();
 			}
@@ -1812,6 +1828,24 @@ class PlayState extends MusicBeatState
 						});
 					}
 				});
+			case 'fallen-down':
+				sound = new FlxSound().loadEmbedded(Paths.music('fallendown_cutsceneloop'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);
+				callTextbox();
+			case 'ruins':
+				sound = new FlxSound().loadEmbedded(Paths.music('ruins_cutsceneloop'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);
+				callTextbox();
+			case 'heartache':
+				sound = new FlxSound().loadEmbedded(Paths.music('freakyMenu'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);
+				callTextbox();
 			default:
 				callTextbox();
 		}
@@ -1838,6 +1872,11 @@ class PlayState extends MusicBeatState
 		var dialogPath = Paths.json(SONG.song.toLowerCase() + '/ending');
 		if (sys.FileSystem.exists(dialogPath) && Ending.getStatus() == 'pacifist')
 		{
+			sound = new FlxSound().loadEmbedded(Paths.music('spare_cutsceneloop'),true);
+			sound.volume = 0;
+			FlxG.sound.list.add(sound);
+			sound.fadeIn(1, 0, 0.8);
+				
 			dialogueBox.destroy();
 			//startedCountdown = false;
 
@@ -1877,6 +1916,9 @@ class PlayState extends MusicBeatState
 
 	function actualEnding()
 	{
+		if(Ending.getStatus() == 'pacifist'){
+			sound.fadeOut(2.2, 0);
+		}
 		// play menu music
 		ForeverTools.resetMenuMusic();
 

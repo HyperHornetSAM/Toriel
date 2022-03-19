@@ -8,6 +8,8 @@ class Ending
 {
 	public static var endingStatus:String = 'neutral';
 	
+	public static var changeMusic:Bool = false;
+	
 	public static function setStatus(newStatus:String){
 		endingStatus = newStatus;
 		FlxG.save.data.endingStatus = newStatus;
