@@ -464,27 +464,34 @@ class Character extends FNFSprite
 				
 				playAnim('idle');
 			case 'heartache-toriel':
-				frames = Paths.getSparrowAtlas('characters/Toriel/heartache_toriel_sprites');
+				frames = Paths.getSparrowAtlas('characters/Toriel/torielHeartache');
 				animation.addByPrefix('idle', 'Toriel Mad idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Toriel Mad SING UP', 24, false);
-				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT', 24, false);
+				animation.addByPrefix('singUP', 'Toriel Mad SING UP instace', 24, false);
+				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT instance', 24, false);
+				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN instance', 24, false);
+				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT instance', 24, false);
 				animation.addByPrefix('dusted', 'turn to dust', 24, false);
 				animation.addByPrefix('genuflect', 'genuflect', 24, false);
-				animation.addByPrefix('genocide', 'swordnoteGENOCIDE', 24, false);
-				animation.addByPrefix('insufficient', 'swordnoteINSUFFICIENT', 24, false);
-				animation.addByPrefix('neutral', 'swordnoteNEUTRAL', 24, false);
+				animation.addByPrefix('singUP-alt', 'Toriel Mad SING UP MISS', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Toriel Mad SING DOWN MISS', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Toriel Mad SING LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Toriel Mad SING RIGHT MISS', 24, false);
+				animation.addByPrefix('genocide', 'swordnoteGENOCIDEshake', 24, false);
+				animation.addByPrefix('neutral', 'swordnoteNEUTRALshake', 24, false);
 				
 				
 				playAnim('idle');
 			case 'battle-toriel':
-				frames = Paths.getSparrowAtlas('characters/Toriel/battle_toriel_sprites');
+				frames = Paths.getSparrowAtlas('characters/Toriel/torielHeartacheMONO');
 				animation.addByPrefix('idle', 'Toriel Mad idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Toriel Mad SING UP', 24, false);
-				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT', 24, false);
+				animation.addByPrefix('singUP', 'Toriel Mad SING UP instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT instance', 24, false);
+				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN instance', 24, false);
+				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT instance', 24, false);
+				animation.addByPrefix('singUP-alt', 'Toriel Mad SING UP MISS', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Toriel Mad SING DOWN MISS', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Toriel Mad SING LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Toriel Mad SING RIGHT MISS', 24, false);
 				
 				playAnim('idle');
 			case 'bf-monochrome':

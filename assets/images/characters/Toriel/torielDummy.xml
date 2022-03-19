@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="torielDummy.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="toriel look left instance 10000" x="10" y="10" width="286" height="793"/>
+	<SubTexture name="toriel look left instance 10001" x="10" y="10" width="286" height="793"/>
+	<SubTexture name="toriel look left instance 10002" x="306" y="10" width="285" height="793" frameX="-1" frameY="0" frameWidth="286" frameHeight="793"/>
+	<SubTexture name="toriel look left instance 10003" x="306" y="10" width="285" height="793" frameX="-1" frameY="0" frameWidth="286" frameHeight="793"/>
+	<SubTexture name="toriel look right instance 10000" x="601" y="10" width="286" height="794"/>
+	<SubTexture name="toriel look right instance 10001" x="601" y="10" width="286" height="794"/>
+	<SubTexture name="toriel look right instance 10002" x="897" y="10" width="285" height="794" frameX="-1" frameY="0" frameWidth="286" frameHeight="794"/>
+	<SubTexture name="toriel look right instance 10003" x="897" y="10" width="285" height="794" frameX="-1" frameY="0" frameWidth="286" frameHeight="794"/>
+</TextureAtlas>

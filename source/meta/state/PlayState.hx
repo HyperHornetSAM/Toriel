@@ -1441,7 +1441,7 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		//*/
 		if (curSong == 'Heartache'){
-			if(curStep >= 918 && genocideHits >= 10){
+			if(curStep >= 918 && genocideHits > 10){
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 					{
 						//torielAlt.alpha -= 0.05;
@@ -1455,29 +1455,29 @@ class PlayState extends MusicBeatState
 						}
 					});
 			}
-			if(curStep == 864 && genocideHits >= 10){ //864 874 902 932 940
+			if(curStep == 864 && genocideHits > 0){ //864 874 902 932 940
 				FlxG.sound.play(Paths.sound('slash'), 0.9);
 			}
-			if(curStep == 874 && genocideHits >= 10){ 
+			if(curStep == 874 && genocideHits > 0){ 
 				FlxG.sound.play(Paths.sound('damage'), 0.9);
 			}
-			if(curStep == 873 + heartTick && genocideHits >= 10){
-				if(heartTick < 9){
+			if(curStep == 873 + heartTick && genocideHits > 0){
+				if(heartTick < genocideHits && heartTick < 9){
 					heartTick++;
 				}
 				var heartString:String = "health" + heartTick;
 				Stage.heartHealth.animation.play(heartString, true);
 			}
-			if(curStep == 902 && genocideHits >= 10){
+			if(curStep == 902 && genocideHits > 10){
 				FlxG.sound.play(Paths.sound('vaporize'), 0.9);
 			}
-			if(curStep == 918 && genocideHits >= 10){
+			if(curStep == 918 && genocideHits > 10){
 				Stage.tHeart.animation.play('die');
 			}
-			if(curStep == 932 && genocideHits >= 10){ 
+			if(curStep == 932 && genocideHits > 10){ 
 				FlxG.sound.play(Paths.sound('break1'), 0.9);
 			}
-			if(curStep == 940 && genocideHits >= 10){ 
+			if(curStep == 940 && genocideHits > 10){ 
 				FlxG.sound.play(Paths.sound('break2'), 0.9);
 			}
 		}
@@ -1543,10 +1543,10 @@ class PlayState extends MusicBeatState
 		}
 		
 		if(curBeat == 218 && curSong == "Heartache"){
-			if(genocideHits < 50 && genocideHits >= 10){
+			if(genocideHits > 0 && genocideHits <= 10){
 				dadOpponent.playAnim('neutral', false);
 			}
-			else if(genocideHits >= 50){
+			else if(genocideHits >= 10){
 				dadOpponent.playAnim('genocide', false);
 			}
 			else{
@@ -1555,16 +1555,16 @@ class PlayState extends MusicBeatState
 		}
 		
 		if(curBeat == 221 && curSong == "Heartache"){
-			if(genocideHits >= 10){
+			if(genocideHits > 10){
 				dadOpponent.playAnim('genuflect', false);
 			}
-			/*else{
+			else{
 				dadOpponent.playAnim('idle');
-			}*/
+			}
 		}
 		
 		if(curBeat == 225 && curSong == "Heartache"){
-			if(genocideHits >= 10){
+			if(genocideHits > 10){
 				dadOpponent.playAnim('dusted', false);
 			}
 		}
@@ -1696,10 +1696,10 @@ class PlayState extends MusicBeatState
 		switch (SONG.song.toLowerCase())
 		{
 			case 'heartache':
-				if (genocideHits < 10){
+				if (genocideHits == 0){
 					Ending.setStatus("pacifist");
 				}
-				else if (genocideHits >= 10 && genocideHits < 50){
+				else if (genocideHits > 0 && genocideHits <= 10){
 					Ending.setStatus("neutral");
 				}
 				else{

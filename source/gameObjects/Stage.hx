@@ -681,18 +681,18 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				if (curBeat == 216 && PlayState.SONG.song.toLowerCase() == 'heartache'){
 					doorway_battle.alpha = 0;
 					doorway.alpha = 1;
-					if(PlayState.genocideHits >= 10){
+					if(PlayState.genocideHits > 0){
 						foreground.add(sliceAnim);
 						sliceAnim.animation.play('slice');
 					}
 				}
 				if (curBeat == 218 && PlayState.SONG.song.toLowerCase() == 'heartache'){
-					if(PlayState.genocideHits >= 10){
+					if(PlayState.genocideHits > 0){
 						foreground.add(heartHealth);
 					}
-					if(PlayState.genocideHits >= 10 && PlayState.genocideHits < 50){
+					if(PlayState.genocideHits > 0 && PlayState.genocideHits <= 10){
 						remove(sliceAnim);
-						swordDamageTotal = 450 + PlayState.genocideHits * 10;
+						swordDamageTotal = PlayState.genocideHits * 43;
 						while(swordDamageTotal >= 100){
 							swordDamageHuns++;
 							swordDamageTotal = swordDamageTotal - 100;
@@ -707,12 +707,16 @@ class Stage extends FlxTypedGroup<FlxBasic>
 						hunsString = "" + swordDamageHuns;
 						foreground.add(swordDamageOne);
 						foreground.add(swordDamageTen);
-						foreground.add(swordDamageHun);
+						if(swordDamageHuns > 0){
+							foreground.add(swordDamageHun);
+						}
 						swordDamageOne.animation.play(onesString);
 						swordDamageTen.animation.play(tensString);
-						swordDamageHun.animation.play(hunsString);
+						if(swordDamageHuns > 0){
+							swordDamageHun.animation.play(hunsString);
+						}
 					}
-					else if(PlayState.genocideHits >= 50){
+					else if(PlayState.genocideHits > 10){
 						remove(sliceAnim);
 						foreground.add(swordDamageOne);
 						foreground.add(swordDamageTen);
@@ -722,9 +726,10 @@ class Stage extends FlxTypedGroup<FlxBasic>
 						swordDamageHun.animation.play("9");
 					}
 				}
-				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits >= 10){
+				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits > 0){
 					foreground.remove(swordDamageOne);
 					foreground.remove(swordDamageTen);
+					if(swordDamageHuns > 0 || PlayState.genocideHits > 10)
 					foreground.remove(swordDamageHun);
 					foreground.remove(heartHealth);
 				}
