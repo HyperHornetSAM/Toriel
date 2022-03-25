@@ -3,8 +3,13 @@ singUP 0 30
 singRIGHT -15 -3
 singLEFT 35 -7
 singDOWN 8 -18
+singUP-alt 0 23
+singRIGHT-alt -8 -3
+singLEFT-alt 30 -3
+singDOWN-alt 8 -13
 genuflect -10 0
-dusted -15 -165
-genocide 0 0
-neutral 0 0
+dusted -13 -173
+genocide 40 0
+neutral 70 -15
 insufficient 0 0
+ohshit 10 -10

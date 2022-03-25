@@ -3,3 +3,4 @@ singUP 0 30
 singRIGHT -13 -1
 singLEFT 30 -10
 singDOWN 8 -18
+ohshit 10 -10

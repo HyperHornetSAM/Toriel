@@ -60,6 +60,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var swordDamageOne:FNFSprite;
 	var swordDamageTen:FNFSprite;
 	var swordDamageHun:FNFSprite;
+	var swordDamageThou:FNFSprite;
+	var swordDamageTenThou:FNFSprite;
 	var bHeart:FNFSprite;
 	public static var tHeart:FNFSprite;
 	var gHeart:FNFSprite;
@@ -168,7 +170,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				RuinsDancers.add(froggitJam);
 				
 				saveSymbol = new BackgroundRuins(1410, 800, true);
-				saveSymbol.setGraphicSize(Std.int(saveSymbol.width * 2));
+				//saveSymbol.setGraphicSize(Std.int(saveSymbol.width * 2));
 				RuinsDancers.add(saveSymbol);
 				
 			case 'doorway':
@@ -238,6 +240,28 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				swordDamageHun.animation.addByPrefix('9', '9', 24, false);
 				swordDamageHun.setGraphicSize(Std.int(swordDamageHun.width * 2));
 				swordDamageHun.antialiasing = true;
+				
+				swordDamageThou = new FNFSprite(-30, 500);
+				swordDamageThou.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/damage');
+				swordDamageThou.animation.addByPrefix('0', '0', 24, false);
+				swordDamageThou.animation.addByPrefix('1', '1', 24, false);
+				swordDamageThou.animation.addByPrefix('2', '2', 24, false);
+				swordDamageThou.animation.addByPrefix('3', '3', 24, false);
+				swordDamageThou.animation.addByPrefix('4', '4', 24, false);
+				swordDamageThou.animation.addByPrefix('5', '5', 24, false);
+				swordDamageThou.animation.addByPrefix('6', '6', 24, false);
+				swordDamageThou.animation.addByPrefix('7', '7', 24, false);
+				swordDamageThou.animation.addByPrefix('8', '8', 24, false);
+				swordDamageThou.animation.addByPrefix('9', '9', 24, false);
+				swordDamageThou.setGraphicSize(Std.int(swordDamageThou.width * 2));
+				swordDamageThou.antialiasing = true;
+				
+				swordDamageTenThou = new FNFSprite(-145, 500);
+				swordDamageTenThou.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/damage');
+				swordDamageTenThou.animation.addByPrefix('1', '1', 24, false);
+				swordDamageTenThou.animation.addByPrefix('2', '2', 24, false);
+				swordDamageTenThou.setGraphicSize(Std.int(swordDamageTenThou.width * 2));
+				swordDamageTenThou.antialiasing = true;
 
 				heartHealth = new FNFSprite(50, 600);
 				heartHealth.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/healthbar');
@@ -721,16 +745,30 @@ class Stage extends FlxTypedGroup<FlxBasic>
 						foreground.add(swordDamageOne);
 						foreground.add(swordDamageTen);
 						foreground.add(swordDamageHun);
-						swordDamageOne.animation.play("9");
-						swordDamageTen.animation.play("9");
-						swordDamageHun.animation.play("9");
+						foreground.add(swordDamageThou);
+						foreground.add(swordDamageTenThou);
+						swordDamageOne.x = swordDamageOne.x + 115;
+						swordDamageTen.x = swordDamageTen.x + 115;
+						swordDamageHun.x = swordDamageHun.x + 115;
+						swordDamageThou.x = swordDamageThou.x + 115;
+						swordDamageTenThou.x = swordDamageTenThou.x + 115;
+						swordDamageOne.animation.play("" + FlxG.random.int(0,9));
+						swordDamageTen.animation.play("" + FlxG.random.int(0,9));
+						swordDamageHun.animation.play("" + FlxG.random.int(0,9));
+						swordDamageThou.animation.play("" + FlxG.random.int(0,9));
+						swordDamageTenThou.animation.play("" + FlxG.random.int(1,2));
 					}
 				}
 				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits > 0){
 					foreground.remove(swordDamageOne);
 					foreground.remove(swordDamageTen);
-					if(swordDamageHuns > 0 || PlayState.genocideHits > 10)
-					foreground.remove(swordDamageHun);
+					if(swordDamageHuns > 0 || PlayState.genocideHits > 10){
+						foreground.remove(swordDamageHun);
+					}
+					if(PlayState.genocideHits > 10){
+						foreground.remove(swordDamageThou);
+						foreground.remove(swordDamageTenThou);
+					}
 					foreground.remove(heartHealth);
 				}
 			case 'ruins':
@@ -746,9 +784,6 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				upperBoppers.animation.play('bop', true);
 				bottomBoppers.animation.play('bop', true);
 				santa.animation.play('idle', true);
-			case 'ruins':
-				froggitJam.animation.play('jam', true);
-				saveSymbol.animation.play('save', true);
 			case 'school':
 				bgGirls.dance();
 

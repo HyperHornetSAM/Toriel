@@ -455,30 +455,31 @@ class Character extends FNFSprite
 
 				playAnim('shoot1');
 			case 'toriel':
-				frames = Paths.getSparrowAtlas('characters/Toriel/toriel_sprites');
-				animation.addByPrefix('idle', 'Toriel idle dance', 24, false);
+				frames = Paths.getSparrowAtlas('characters/Toriel/torielNormal');
+				animation.addByPrefix('idle', 'idle dance', 24, false);
 				animation.addByPrefix('singUP', 'Toriel SING UP', 24, false);
 				animation.addByPrefix('singRIGHT', 'Toriel SING RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'Toriel SING DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Toriel SING LEFT', 24, false);
+				animation.addByPrefix('ohshit', 'Toriel urDed instance', 24, false);
 				
 				playAnim('idle');
 			case 'heartache-toriel':
 				frames = Paths.getSparrowAtlas('characters/Toriel/torielHeartache');
 				animation.addByPrefix('idle', 'Toriel Mad idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Toriel Mad SING UP instace', 24, false);
+				animation.addByPrefix('singUP', 'Toriel Mad SING UP instance', 24, false);
 				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT instance', 24, false);
 				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN instance', 24, false);
 				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT instance', 24, false);
 				animation.addByPrefix('dusted', 'turn to dust', 24, false);
 				animation.addByPrefix('genuflect', 'genuflect', 24, false);
-				animation.addByPrefix('singUP-alt', 'Toriel Mad SING UP MISS', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'Toriel Mad SING DOWN MISS', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'Toriel Mad SING LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'Toriel Mad SING RIGHT MISS', 24, false);
+				animation.addByPrefix('singUP-alt', 'Toriel SING UP MISS', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Toriel SING DOWN MISS', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Toriel SING LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Toriel SING RIGHT MISS', 24, false);
 				animation.addByPrefix('genocide', 'swordnoteGENOCIDEshake', 24, false);
 				animation.addByPrefix('neutral', 'swordnoteNEUTRALshake', 24, false);
-				
+				animation.addByPrefix('ohshit', 'Toriel urDed instance', 24, false);
 				
 				playAnim('idle');
 			case 'battle-toriel':
@@ -488,10 +489,11 @@ class Character extends FNFSprite
 				animation.addByPrefix('singRIGHT', 'Toriel Mad SING RIGHT instance', 24, false);
 				animation.addByPrefix('singDOWN', 'Toriel Mad SING DOWN instance', 24, false);
 				animation.addByPrefix('singLEFT', 'Toriel Mad SING LEFT instance', 24, false);
-				animation.addByPrefix('singUP-alt', 'Toriel Mad SING UP MISS', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'Toriel Mad SING DOWN MISS', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'Toriel Mad SING LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'Toriel Mad SING RIGHT MISS', 24, false);
+				animation.addByPrefix('singUP-alt', 'Toriel SING UP MISS', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Toriel SING DOWN MISS', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Toriel SING LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Toriel SING RIGHT MISS', 24, false);
+				animation.addByPrefix('ohshit', 'Toriel urDed instance', 24, false);
 				
 				playAnim('idle');
 			case 'bf-monochrome':

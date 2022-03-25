@@ -139,7 +139,9 @@ class PlayState extends MusicBeatState
 	public var torielHelp:Bool = false;
 	public var healSoundOff:Bool = false;
 	
-	public static var heartTick:Int = 1;
+	public static var heartTick:Int = 0;
+	public static var heartTickMax:Int = 0;
+	public static var hasDied = false;
 	
 	public var currentlyDancing:Bool = true;
 
@@ -149,6 +151,7 @@ class PlayState extends MusicBeatState
 
 	public static var strumLines:FlxTypedGroup<Strumline>;
 	public static var strumHUD:Array<FlxCamera> = [];
+
 
 	private var allUIs:Array<FlxCamera> = [];
 
@@ -170,7 +173,9 @@ class PlayState extends MusicBeatState
 		health = 1;
 		misses = 0;
 		genocideHits = 0;
-		heartTick = 1;
+		heartTick = 0;
+		heartTickMax = 0;
+		hasDied = false;
 		// sets up the combo object array
 		lastCombo = [];
 
@@ -622,9 +627,21 @@ class PlayState extends MusicBeatState
 				paused = true;
 
 				resetMusic();
-
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-
+								
+				if(dadOpponent.curCharacter == 'toriel' || dadOpponent.curCharacter == 'battle-toriel' || dadOpponent.curCharacter == 'heartache-toriel'){
+					dadOpponent.playAnim('ohshit', false);
+					new FlxTimer().start(0.1, function(dedtimer:FlxTimer)
+					{
+						if(hasDied == false){
+							hasDied = true;
+							openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+						}
+					});
+					
+				}
+				else{
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				}
 				// discord stuffs should go here
 			}
 
@@ -979,6 +996,14 @@ class PlayState extends MusicBeatState
 				altString = '-alt';
 			else
 				altString = '';
+		}
+		//trace("character singing is: " + character.curCharacter);
+		if ((character.curCharacter == 'battle-toriel' || character.curCharacter == 'heartache-toriel') && torielHelp){
+			if (altString != '-alt')
+				altString = '-alt';
+			else
+				altString = '';
+			trace("toriel anim is alt!");
 		}
 
 		stringArrow = baseString + altString;
@@ -1449,6 +1474,10 @@ class PlayState extends MusicBeatState
 						boyfriend.alpha -= 0.05;
 						Stage.doorway.alpha -= 0.05;
 						camHUD.alpha -= 0.05;
+						for (i in 0...strumLines.length)
+						{
+							strumHUD[i].alpha -= 0.05;
+						}
 						if (gf.alpha > 0)
 						{
 							tmr.reset(0.5);
@@ -1458,12 +1487,31 @@ class PlayState extends MusicBeatState
 			if(curStep == 864 && genocideHits > 0){ //864 874 902 932 940
 				FlxG.sound.play(Paths.sound('slash'), 0.9);
 			}
+			if(curStep == 872 && genocideHits > 0 && genocideHits <= 10){
+				heartTickMax = genocideHits;
+				switch(heartTickMax){
+					case 1 | 2:
+						heartTickMax++;
+					case 7 | 8:
+						heartTickMax--;
+					case 9 | 10:
+						heartTickMax = heartTickMax - 2;
+				}
+			}
 			if(curStep == 874 && genocideHits > 0){ 
 				FlxG.sound.play(Paths.sound('damage'), 0.9);
 			}
 			if(curStep == 873 + heartTick && genocideHits > 0){
-				if(heartTick < genocideHits && heartTick < 9){
-					heartTick++;
+				if(genocideHits > 10){
+					if(heartTick < 9){
+						heartTick++;
+					}
+				}
+				else
+				{
+					if(heartTick < heartTickMax){
+						heartTick++;
+					}
 				}
 				var heartString:String = "health" + heartTick;
 				Stage.heartHealth.animation.play(heartString, true);
