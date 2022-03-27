@@ -148,6 +148,7 @@ class PlayState extends MusicBeatState
 	// strumlines
 	private var dadStrums:Strumline;
 	private var boyfriendStrums:Strumline;
+	private var tempStrums:Strumline;
 
 	public static var strumLines:FlxTypedGroup<Strumline>;
 	public static var strumHUD:Array<FlxCamera> = [];
@@ -332,6 +333,13 @@ class PlayState extends MusicBeatState
 		dadStrums.visible = !Init.trueSettings.get('Centered Notefield');
 		boyfriendStrums = new Strumline(placement + (!Init.trueSettings.get('Centered Notefield') ? (FlxG.width / 4) : 0), this, boyfriend, true, false, true,
 			4, Init.trueSettings.get('Downscroll'));
+			
+		
+		if(SONG.song.toLowerCase() == 'anticipation'){
+			boyfriendStrums = new Strumline(placement - (!Init.trueSettings.get('Centered Notefield') ? (FlxG.width / 4) : 0), this, boyfriend, true, false, true,
+			4, Init.trueSettings.get('Downscroll'));
+			dadStrums = new Strumline(placement + (FlxG.width / 4), this, dadOpponent, false, true, false, 4, Init.trueSettings.get('Downscroll'));
+		}
 
 		strumLines.add(dadStrums);
 		strumLines.add(boyfriendStrums);

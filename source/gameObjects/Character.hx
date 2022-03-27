@@ -531,6 +531,36 @@ class Character extends FNFSprite
 				animation.addByPrefix('scared', 'GF FEAR', 24);
 
 				playAnim('danceRight');
+			case 'dummy':
+				tex = Paths.getSparrowAtlas('characters/Dummy/dummy');
+				frames = tex;
+				animation.addByPrefix('idle', 'dummy stance', 24, false);
+				playAnim('idle');
+			case 'gf-toriel':
+				tex = Paths.getSparrowAtlas('characters/Toriel/torielDummy');
+				frames = tex; 
+				animation.addByPrefix('danceLeft', 'toriel look left', 24, false);
+				animation.addByPrefix('danceRight', 'toriel look right', 24, false);
+				
+				playAnim('danceRight');
+			case 'bf-flipped':
+				frames = Paths.getSparrowAtlas('characters/BF/BOYFRIEND');
+
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				playAnim('idle');
+
+				flipX = false;
 			default:
 				// set up animations if they aren't already
 

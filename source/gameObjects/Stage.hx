@@ -110,6 +110,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					curStage = 'ruins';
 				case 'heartache':
 					curStage = 'doorway';
+				case 'anticipation':
+					curStage = 'antruins';
 				default:
 					curStage = 'stage';
 			}
@@ -172,6 +174,26 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				saveSymbol = new BackgroundRuins(1410, 800, true);
 				//saveSymbol.setGraphicSize(Std.int(saveSymbol.width * 2));
 				RuinsDancers.add(saveSymbol);
+				
+			case 'antruins':
+				curStage = 'antruins';
+				PlayState.defaultCamZoom = 0.7;
+
+				var floor:FNFSprite = new FNFSprite(-475, -250).loadGraphic(Paths.image('backgrounds/' + curStage + '/floor'));
+				floor.setGraphicSize(Std.int(floor.width * 1.0));
+				floor.updateHitbox();
+				floor.antialiasing = true;
+				floor.scrollFactor.set(0.95, 0.95);
+				floor.active = false;
+				add(floor);
+
+				var wall:FNFSprite = new FNFSprite(-475, -250).loadGraphic(Paths.image('backgrounds/' + curStage + '/wall'));
+				wall.setGraphicSize(Std.int(wall.width * 1.0));
+				wall.updateHitbox();
+				wall.antialiasing = true;
+				wall.scrollFactor.set(0.8, 0.95);
+				wall.active = false;
+				add(wall);
 				
 			case 'doorway':
 				curStage = 'doorway';
@@ -589,6 +611,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				gfVersion = 'gf-pixel';
 			case 'schoolEvil':
 				gfVersion = 'gf-pixel';
+			case 'antruins':
+				gfVersion = 'gf-toriel';
 		}
 
 		return gfVersion;
@@ -637,6 +661,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'tankman':
 				dad.x += 50;
 				dad.y += 200;
+			case 'dummy':
+				dad.y += 350;
 		}
 	}
 
@@ -676,6 +702,11 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'antruins':
+				gf.x += 275;
+				gf.y -= 200;
+				boyfriend.x -= 650;
+				dad.x += 1000;
 		}
 	}
 

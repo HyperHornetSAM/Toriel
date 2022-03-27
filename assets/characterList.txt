@@ -5,3 +5,6 @@ bf-monochrome
 gf-monochrome
 battle-toriel
 heartache-toriel
+gf-toriel
+bf-flipped
+dummy
