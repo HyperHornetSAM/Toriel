@@ -61,16 +61,28 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		add(healthBarBG);
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8));
+		
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFAF0103, 0xFFFEFF0B);
+		if(PlayState.SONG.song.toLowerCase() == 'anticipation'){
+			healthBar.createFilledBar(0xFFFEFF0B, 0xFFAF0103);
+		}
+		else{
+			healthBar.createFilledBar(0xFFAF0103, 0xFFFEFF0B);
+		}
 		// healthBar
 		add(healthBar);
 
-		iconP1 = new HealthIcon(SONG.player1, true);
+		if(PlayState.SONG.song.toLowerCase() == 'anticipation'){
+			iconP1 = new HealthIcon(SONG.player1, false);
+			iconP2 = new HealthIcon(SONG.player2, true);
+		}
+		else{
+			iconP1 = new HealthIcon(SONG.player1, true);
+			iconP2 = new HealthIcon(SONG.player2, false);
+		}
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
 
-		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
 
@@ -100,7 +112,12 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 	override public function update(elapsed:Float)
 	{
 		// pain, this is like the 7th attempt
-		healthBar.percent = (PlayState.health * 50);
+		if(PlayState.SONG.song.toLowerCase() == 'anticipation'){
+			healthBar.percent = 100 - (PlayState.health * 50);
+		}
+		else{
+			healthBar.percent = (PlayState.health * 50);
+		}
 
 		var iconLerp = 0.5;
 		iconP1.setGraphicSize(Std.int(FlxMath.lerp(iconP1.initialWidth, iconP1.width, iconLerp)));
@@ -113,16 +130,35 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
 		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
+		
+		if(PlayState.SONG.song.toLowerCase() == 'anticipation'){
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (iconP1.width - iconOffset);
+			iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - iconOffset);
+		}
 
-		if (healthBar.percent < 20)
-			iconP1.animation.curAnim.curFrame = 1;
-		else
-			iconP1.animation.curAnim.curFrame = 0;
+		if(PlayState.SONG.song.toLowerCase() == 'anticipation'){
+			if (healthBar.percent > 80)
+				iconP1.animation.curAnim.curFrame = 1;
+			else
+				iconP1.animation.curAnim.curFrame = 0;
 
-		if (healthBar.percent > 80)
-			iconP2.animation.curAnim.curFrame = 1;
-		else
-			iconP2.animation.curAnim.curFrame = 0;
+			if (healthBar.percent < 20)
+				iconP2.animation.curAnim.curFrame = 1;
+			else
+				iconP2.animation.curAnim.curFrame = 0;
+		}
+		else{
+			if (healthBar.percent < 20)
+				iconP1.animation.curAnim.curFrame = 1;
+			else
+				iconP1.animation.curAnim.curFrame = 0;
+
+			if (healthBar.percent > 80)
+				iconP2.animation.curAnim.curFrame = 1;
+			else
+				iconP2.animation.curAnim.curFrame = 0;
+		}
+		
 	}
 
 	private final divider:String = ' - ';

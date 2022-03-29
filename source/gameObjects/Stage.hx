@@ -177,7 +177,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 			case 'antruins':
 				curStage = 'antruins';
-				PlayState.defaultCamZoom = 0.7;
+				PlayState.defaultCamZoom = 0.6;
 
 				var floor:FNFSprite = new FNFSprite(-475, -250).loadGraphic(Paths.image('backgrounds/' + curStage + '/floor'));
 				floor.setGraphicSize(Std.int(floor.width * 1.0));
@@ -191,7 +191,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				wall.setGraphicSize(Std.int(wall.width * 1.0));
 				wall.updateHitbox();
 				wall.antialiasing = true;
-				wall.scrollFactor.set(0.8, 0.95);
+				wall.scrollFactor.set(0.95, 0.95);
 				wall.active = false;
 				add(wall);
 				
@@ -705,7 +705,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'antruins':
 				gf.x += 275;
 				gf.y -= 200;
-				boyfriend.x -= 650;
+				boyfriend.x -= 725;
 				dad.x += 1000;
 		}
 	}
@@ -736,12 +736,12 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				if (curBeat == 216 && PlayState.SONG.song.toLowerCase() == 'heartache'){
 					doorway_battle.alpha = 0;
 					doorway.alpha = 1;
-					if(PlayState.genocideHits > 0){
+					if(PlayState.genocideHits > 0 && PlayState.isStoryMode){
 						foreground.add(sliceAnim);
 						sliceAnim.animation.play('slice');
 					}
 				}
-				if (curBeat == 218 && PlayState.SONG.song.toLowerCase() == 'heartache'){
+				if (curBeat == 218 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.isStoryMode){
 					if(PlayState.genocideHits > 0){
 						foreground.add(heartHealth);
 					}
@@ -790,7 +790,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 						swordDamageTenThou.animation.play("" + FlxG.random.int(1,2));
 					}
 				}
-				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits > 0){
+				if (curBeat == 221 && PlayState.SONG.song.toLowerCase() == 'heartache' && PlayState.genocideHits > 0 && PlayState.isStoryMode){
 					foreground.remove(swordDamageOne);
 					foreground.remove(swordDamageTen);
 					if(swordDamageHuns > 0 || PlayState.genocideHits > 10){

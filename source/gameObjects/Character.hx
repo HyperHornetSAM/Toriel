@@ -275,6 +275,15 @@ class Character extends FNFSprite
 				playAnim('firstDeath');
 
 				flipX = true;
+			
+			case 'bf-flipped-dead':
+				frames = Paths.getSparrowAtlas('characters/BF/BOYFRIEND');
+				setGraphicSize(Std.int(width * 1.5));
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				playAnim('firstDeath');
 
 			case 'bf-holding-gf':
 				frames = Paths.getSparrowAtlas('characters/bfAndGF');
@@ -534,6 +543,7 @@ class Character extends FNFSprite
 			case 'dummy':
 				tex = Paths.getSparrowAtlas('characters/Dummy/dummy');
 				frames = tex;
+				setGraphicSize(Std.int(width * 1.5));
 				animation.addByPrefix('idle', 'dummy stance', 24, false);
 				playAnim('idle');
 			case 'gf-toriel':
@@ -545,7 +555,7 @@ class Character extends FNFSprite
 				playAnim('danceRight');
 			case 'bf-flipped':
 				frames = Paths.getSparrowAtlas('characters/BF/BOYFRIEND');
-
+				setGraphicSize(Std.int(width * 1.5));
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
@@ -557,7 +567,7 @@ class Character extends FNFSprite
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
-
+				
 				playAnim('idle');
 
 				flipX = false;
@@ -696,14 +706,24 @@ class Character extends FNFSprite
 			switch (curCharSimplified)
 			{
 				case 'gf':
-					if ((!animation.curAnim.name.startsWith('hair')) && (!animation.curAnim.name.startsWith('sad')))
-					{
-						danced = !danced;
-
-						if (danced)
-							playAnim('danceRight', forced);
-						else
+					if(curCharacter == 'gf-toriel'){
+						if(PlayState.danceBool){
 							playAnim('danceLeft', forced);
+						}
+						else{
+							playAnim('danceRight', forced);
+						}
+					}
+					else{
+						if ((!animation.curAnim.name.startsWith('hair')) && (!animation.curAnim.name.startsWith('sad')))
+						{
+							danced = !danced;
+
+							if (danced)
+								playAnim('danceRight', forced);
+							else
+								playAnim('danceLeft', forced);
+						}
 					}
 				default:
 					// Left/right dancing, think Skid & Pump

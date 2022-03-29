@@ -79,7 +79,7 @@ class FreeplayState extends MusicBeatState
 
 		for (i in folderSongs)
 		{
-			if (!existingSongs.contains(i.toLowerCase()))
+			if (!existingSongs.contains(i.toLowerCase()) && (i.toLowerCase() != 'anticipation' || Ending.getStatus() == 'pacifist'))
 			{
 				var icon:String = 'gf';
 				var chartExists:Bool = FileSystem.exists(Paths.songJson(i, i));

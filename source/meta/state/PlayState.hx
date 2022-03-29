@@ -144,6 +144,9 @@ class PlayState extends MusicBeatState
 	public static var hasDied = false;
 	
 	public var currentlyDancing:Bool = true;
+	public var stopCheering:Bool = false;
+	
+	public static var danceBool:Bool = true;
 
 	// strumlines
 	private var dadStrums:Strumline;
@@ -557,10 +560,21 @@ class PlayState extends MusicBeatState
 			{
 				if (!PlayState.SONG.notes[Std.int(curStep / 16)].mustHitSection)
 				{
-					var char = dadOpponent;
-
-					var getCenterX = char.getMidpoint().x + 150;
-					var getCenterY = char.getMidpoint().y - 100;
+					var char;
+					var getCenterX;
+					var getCenterY;
+					
+					if(SONG.song.toLowerCase() == 'anticipation'){
+						char = gf;
+						getCenterX = char.getMidpoint().x + 220;
+						getCenterY = char.getMidpoint().y + 25;
+						danceBool = false;
+					}
+					else{
+						char = dadOpponent;
+						getCenterX = char.getMidpoint().x + 150;
+						getCenterY = char.getMidpoint().y - 100;
+					}
 					switch (dadOpponent.curCharacter)
 					{
 						case 'mom':
@@ -587,10 +601,22 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					var char = boyfriend;
-
-					var getCenterX = char.getMidpoint().x - 100;
-					var getCenterY = char.getMidpoint().y - 100;
+					var char;
+					var getCenterX;
+					var getCenterY;
+					
+					if(SONG.song.toLowerCase() == 'anticipation'){
+						char = gf;
+						getCenterX = char.getMidpoint().x - 220;
+						getCenterY = char.getMidpoint().y + 25;
+						danceBool = true;
+					}
+					else
+					{
+						char = boyfriend;
+						getCenterX = char.getMidpoint().x - 100;
+						getCenterY = char.getMidpoint().y - 100;
+					}
 					switch (curStage)
 					{
 						case 'limo':
@@ -1473,7 +1499,7 @@ class PlayState extends MusicBeatState
 		if (songMusic.time > Conductor.songPosition + 20 || songMusic.time < Conductor.songPosition - 20)
 			resyncVocals();
 		//*/
-		if (curSong == 'Heartache'){
+		if (curSong == 'Heartache' && isStoryMode){
 			if(curStep >= 918 && genocideHits > 10){
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 					{
@@ -1556,9 +1582,14 @@ class PlayState extends MusicBeatState
 	{
 		super.beatHit();
 		
-		if(currentlyDancing == false){
+		if(currentlyDancing == true && stopCheering == true){
 			gf.playAnim('danceLeft');
+			stopCheering = false;
+		}
+		
+		if(currentlyDancing == false){
 			currentlyDancing = true;
+			stopCheering = true;
 		}
 
 		if ((FlxG.camera.zoom < 1.35 && curBeat % 4 == 0) && (!Init.trueSettings.get('Reduced Movements')))
@@ -1576,55 +1607,67 @@ class PlayState extends MusicBeatState
 				Conductor.changeBPM(SONG.notes[Math.floor(curStep / 16)].bpm);
 			}
 		}
-		
-		if((curBeat == 24 || curBeat == 174) && curSong == "Heartache"){
-			gf.setCharacter(400, 130, "gf-monochrome");
-			dadOpponent.setCharacter(100, 100, "battle-toriel");
-			boyfriend.setCharacter(770, 450, "bf-monochrome");
+		if(curBeat == 165 && curSong == "Anticipation"){
+			FlxG.sound.play(Paths.sound('slidewhistle'), 1);
+			FlxTween.tween(dadOpponent, {x: 2500}, 1.5);
 		}
+		if(curSong == "Heartache"){
+			if(curBeat == 24 || curBeat == 174){
+				gf.setCharacter(400, 130, "gf-monochrome");
+				dadOpponent.setCharacter(100, 100, "battle-toriel");
+				boyfriend.setCharacter(770, 450, "bf-monochrome");
+			}
 		
-		if(curBeat == 102 && curSong == "Heartache"){
-			gf.setCharacter(400, 130, "gf");
-			dadOpponent.setCharacter(100, 100, "heartache-toriel");
-			boyfriend.setCharacter(770, 450, "bf");
-		}
+			if(curBeat == 102){
+				gf.setCharacter(400, 130, "gf");
+				dadOpponent.setCharacter(100, 100, "heartache-toriel");
+				boyfriend.setCharacter(770, 450, "bf");
+			}
 		
-		if(curBeat == 216 && curSong == "Heartache"){
-			gf.setCharacter(400, 130, "gf");
-			dadOpponent.setCharacter(100, 100, "heartache-toriel");
-			boyfriend.setCharacter(770, 450, "bf");
-			if (genocideHits < 10){
-				dadOpponent.playAnim('insufficient', false);
+			if(curBeat == 216){
+				gf.setCharacter(400, 130, "gf");
+				dadOpponent.setCharacter(100, 100, "heartache-toriel");
+				boyfriend.setCharacter(770, 450, "bf");
 			}
-		}
 		
-		if(curBeat == 218 && curSong == "Heartache"){
-			if(genocideHits > 0 && genocideHits <= 10){
-				dadOpponent.playAnim('neutral', false);
+			if(curBeat == 218 && isStoryMode){
+				if(genocideHits > 0 && genocideHits <= 10){
+					dadOpponent.playAnim('neutral', false);
+				}
+				else if(genocideHits >= 10){
+					dadOpponent.playAnim('genocide', false);
+				}
+				else{
+					dadOpponent.playAnim('idle', false);
+				}
 			}
-			else if(genocideHits >= 10){
-				dadOpponent.playAnim('genocide', false);
-			}
-			else{
-				dadOpponent.playAnim('idle', false);
-			}
-		}
 		
-		if(curBeat == 221 && curSong == "Heartache"){
-			if(genocideHits > 10){
-				dadOpponent.playAnim('genuflect', false);
+			if(curBeat == 221){
+				if(isStoryMode){
+					if(genocideHits > 10){
+						dadOpponent.playAnim('genuflect', false);
+					}
+					else{
+						dadOpponent.playAnim('idle');
+					}
+				}
+				else{
+					endSong();
+				}
 			}
-			else{
-				dadOpponent.playAnim('idle');
-			}
-		}
-		
-		if(curBeat == 225 && curSong == "Heartache"){
-			if(genocideHits > 10){
-				dadOpponent.playAnim('dusted', false);
-			}
-		}
 
+			if(curBeat == 223 && isStoryMode){
+				if(genocideHits <= 10){
+					endSong();
+				}
+			}
+		
+			if(curBeat == 225 && isStoryMode){
+				if(genocideHits > 10){
+					dadOpponent.playAnim('dusted', false);
+				}
+			}
+		}
 		uiHUD.beatHit();
 
 		//
@@ -1926,7 +1969,7 @@ class PlayState extends MusicBeatState
 	
 	function callTextboxTwo() {
 		var dialogPath = Paths.json(SONG.song.toLowerCase() + '/ending');
-		if (sys.FileSystem.exists(dialogPath) && Ending.getStatus() == 'pacifist')
+		if (sys.FileSystem.exists(dialogPath) && Ending.getStatus() == 'pacifist' && cast(Init.trueSettings.get('Skip Text'), String) != 'always')
 		{
 			sound = new FlxSound().loadEmbedded(Paths.music('spare_cutsceneloop'),true);
 			sound.volume = 0;
