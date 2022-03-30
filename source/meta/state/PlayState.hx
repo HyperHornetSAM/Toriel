@@ -1501,7 +1501,7 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		//*/
 		if (curSong == 'Heartache' && isStoryMode){
-			if(curStep >= 918 && genocideHits > 10){
+			if(curStep >= 909 && genocideHits > 10){
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 					{
 						//torielAlt.alpha -= 0.05;
@@ -1551,16 +1551,16 @@ class PlayState extends MusicBeatState
 				var heartString:String = "health" + heartTick;
 				Stage.heartHealth.animation.play(heartString, true);
 			}
-			if(curStep == 902 && genocideHits > 10){
+			if(curStep == 898 && genocideHits > 10){
 				FlxG.sound.play(Paths.sound('vaporize'), 0.9);
 			}
-			if(curStep == 918 && genocideHits > 10){
+			if(curStep == 909 && genocideHits > 10){
 				Stage.tHeart.animation.play('die');
 			}
-			if(curStep == 932 && genocideHits > 10){ 
+			if(curStep == 923 && genocideHits > 10){ 
 				FlxG.sound.play(Paths.sound('break1'), 0.9);
 			}
-			if(curStep == 940 && genocideHits > 10){ 
+			if(curStep == 931 && genocideHits > 10){ 
 				FlxG.sound.play(Paths.sound('break2'), 0.9);
 			}
 		}
@@ -1657,16 +1657,12 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			if(curBeat == 223 && isStoryMode){
-				if(genocideHits <= 10){
-					endSong();
-				}
+			if(curBeat == 223 && isStoryMode && genocideHits <= 10){
+				endSong();
 			}
-		
-			if(curBeat == 225 && isStoryMode){
-				if(genocideHits > 10){
-					dadOpponent.playAnim('dusted', false);
-				}
+			
+			if(curBeat == 224 && isStoryMode && genocideHits > 10){
+				dadOpponent.playAnim('dusted', false);
 			}
 		}
 		uiHUD.beatHit();
