@@ -145,6 +145,7 @@ class PlayState extends MusicBeatState
 	
 	public var currentlyDancing:Bool = true;
 	public var stopCheering:Bool = false;
+	private var alreadyDidThis = false;
 	
 	public static var danceBool:Bool = true;
 
@@ -1795,16 +1796,22 @@ class PlayState extends MusicBeatState
 		switch (SONG.song.toLowerCase())
 		{
 			case 'heartache':
-				if (genocideHits == 0){
-					Ending.setStatus("pacifist");
-				}
-				else if (genocideHits > 0 && genocideHits <= 10){
-					Ending.setStatus("neutral");
+				if(alreadyDidThis == false){
+					if (genocideHits == 0){
+						Ending.setStatus("pacifist");
+					}
+					else if (genocideHits > 0 && genocideHits <= 10){
+						Ending.setStatus("neutral");
+					}
+					else{
+						Ending.setStatus("genocide");
+					}
+					callTextboxTwo();
+					alreadyDidThis = true;
 				}
 				else{
-					Ending.setStatus("genocide");
+					trace("Already did this!");
 				}
-				callTextboxTwo();
 			case 'eggnog':
 				// make the lights go out
 				var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
