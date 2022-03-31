@@ -3,7 +3,7 @@ Source code for the Friday Night Funkin': VS. Toriel mod.
 
 CREDITS:
 
-[keno9988](https://gamebanana.com/members/1759222) - Director, Artist, Composer, Charter
+[keno9988](https://gamejolt.com/@Keno9988ii) - Director, Artist, Composer, Charter
 
 [HyperSAM](https://twitter.com/HyperNormalSAM) - Programmer
 
