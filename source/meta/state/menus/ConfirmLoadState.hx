@@ -66,12 +66,14 @@ class ConfirmLoadState extends MusicBeatState
 	
 	private function exitState(selected:Int){
 		if(selected == 1){
+			FlxG.sound.play(Paths.sound('confirmMenu2'));
 			Ending.setStatus('neutral');
 			Ending.changeMusic = true;
 			TitleState.initialized = false;
 			Main.switchState(this, new TitleState());
 		}
 		else{
+			FlxG.sound.play(Paths.sound('cancelMenu'));
 			Main.switchState(this, new MainMenuState());
 		}
 	}
