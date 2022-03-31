@@ -265,10 +265,7 @@ class MainMenuState extends MusicBeatState
 								}
 							case 'freeplay':
 								if(Ending.getStatus() == 'genocide'){
-									Ending.setStatus('neutral');
-									Ending.changeMusic = true;
-									TitleState.initialized = false;
-									Main.switchState(this, new TitleState());
+									Main.switchState(this, new ConfirmLoadState());
 								}
 								else{
 									Main.switchState(this, new FreeplayState());

@@ -129,7 +129,7 @@ class Alphabet extends FlxSpriteGroup
 			var isNumber:Bool = AlphaCharacter.numbers.contains(character);
 			var isSymbol:Bool = AlphaCharacter.symbols.contains(character);
 
-			if ((AlphaCharacter.alphabet.indexOf(character.toLowerCase()) != -1) || (AlphaCharacter.numbers.contains(character)))
+			if ((AlphaCharacter.alphabet.indexOf(character.toLowerCase()) != -1) || (AlphaCharacter.numbers.contains(character)) || isNumber || isSymbol)
 			{
 				if (xPosResetted)
 				{
@@ -138,8 +138,12 @@ class Alphabet extends FlxSpriteGroup
 				}
 				else
 				{
-					if (lastSprite != null)
+					if (lastSprite != null){
 						xPos += lastSprite.width;
+						if(!isBold){
+							xPos += 5;
+						}
+					}
 				}
 
 				if (lastWasSpace)
@@ -160,6 +164,17 @@ class Alphabet extends FlxSpriteGroup
 						letter.createSymbol(character);
 					else
 						letter.createLetter(character);
+				}
+				
+				if(character == '*'){
+					letter.setGraphicSize(39, 26);
+					letter.y += 50;
+				}
+				else if (character == '?'){
+					letter.y += 45;
+				}
+				else if (character == 'y'){
+					letter.y += 5;
 				}
 
 				arrayLetters.push(letter);
@@ -223,6 +238,9 @@ class Alphabet extends FlxSpriteGroup
 				{
 					lastSprite.updateHitbox();
 					xPos += lastSprite.width + 3;
+					if(!isBold){
+						xPos += 1;
+					}
 				}
 				else
 				{
@@ -398,7 +416,7 @@ class AlphaCharacter extends FlxSprite
 			case "?":
 				animation.addByPrefix(letter, 'question mark', 24);
 				animation.play(letter);
-				setGraphicSize(20, 40);
+				setGraphicSize(35, 50);
 				y += 16;
 			case "!":
 				animation.addByPrefix(letter, 'exclamation point', 24);
