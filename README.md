@@ -7,4 +7,4 @@ CREDITS:
 
 [HyperSAM](https://twitter.com/HyperNormalSAM) - Programmer
 
-[ZipCorner](https://twitter.com/zipcorner) - Charter, Programmer
+[ZipCorner](https://twitter.com/zipcorner) - Charter, Programmer, Cutscene Background Artist
